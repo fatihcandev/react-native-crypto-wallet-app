@@ -18,7 +18,43 @@ const theme = createTheme({
     l: 24,
     xl: 40,
   },
-  textVariants: {},
+  textVariants: {
+    h1: {
+      fontFamily: 'TitilliumWeb-Bold',
+      fontSize: 36,
+      lineHeight: 56,
+    },
+    h2: {
+      fontFamily: 'TitilliumWeb-SemiBold',
+      fontSize: 32,
+      lineHeight: 32,
+    },
+    h3: {
+      fontFamily: 'TitilliumWeb-SemiBold',
+      fontSize: 26,
+      lineHeight: 32,
+    },
+    sublime: {
+      fontFamily: 'TitilliumWeb-Regular',
+      fontSize: 19,
+      lineHeight: 24,
+    },
+    paragraph: {
+      fontFamily: 'TitilliumWeb-Regular',
+      fontSize: 15,
+      lineHeight: 24,
+    },
+    link: {
+      fontFamily: 'TitilliumWeb-SemiBold',
+      fontSize: 15,
+      lineHeight: 24,
+    },
+    fineprint: {
+      fontFamily: 'TitilliumWeb-SemiBold',
+      fontSize: 13,
+      lineHeight: 24,
+    },
+  },
   breakpoints: {
     phone: 0,
     tablet: 768,

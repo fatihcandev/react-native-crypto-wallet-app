@@ -1,0 +1,9 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.5 2 2 6.5 2 12V14V18V19C2 20.7 3.3 22 5 22H6C7.7 22 9 20.7 9 19V16C9 14.3 7.7 13 6 13H4V12C4 7.6 7.6 4 12 4C16.4 4 20 7.6 20 12V13H18C16.3 13 15 14.3 15 16V19C15 20.7 16.3 22 18 22H19C20.7 22 22 20.7 22 19V18V14V12C22 6.5 17.5 2 12 2ZM6 15C6.6 15 7 15.4 7 16V19C7 19.6 6.6 20 6 20H5C4.4 20 4 19.6 4 19V18V15H6ZM19 20C19.6 20 20 19.6 20 19V18V15H18C17.4 15 17 15.4 17 16V19C17 19.6 17.4 20 18 20H19Z" fill="black"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.5 2 2 6.5 2 12V14V18V19C2 20.7 3.3 22 5 22H6C7.7 22 9 20.7 9 19V16C9 14.3 7.7 13 6 13H4V12C4 7.6 7.6 4 12 4C16.4 4 20 7.6 20 12V13H18C16.3 13 15 14.3 15 16V19C15 20.7 16.3 22 18 22H19C20.7 22 22 20.7 22 19V18V14V12C22 6.5 17.5 2 12 2ZM6 15C6.6 15 7 15.4 7 16V19C7 19.6 6.6 20 6 20H5C4.4 20 4 19.6 4 19V18V15H6ZM19 20C19.6 20 20 19.6 20 19V18V15H18C17.4 15 17 15.4 17 16V19C17 19.6 17.4 20 18 20H19Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<rect width="24" height="24" fill="#347AF0"/>
+</g>
+</svg>
