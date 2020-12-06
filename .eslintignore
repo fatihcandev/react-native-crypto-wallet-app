@@ -1,0 +1,6 @@
+# .eslintignore
+
+ios
+android
+build
+coverage
