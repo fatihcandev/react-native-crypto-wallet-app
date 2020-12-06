@@ -12,7 +12,8 @@
     "lint": "yarn lint:ts",
     "format": "prettier --write 'src/**/*.{ts,tsx}' && yarn lint:eslint --fix",
     "format:check": "prettier -c 'src/**/*.{ts,tsx}'",
-    "svgr": "npx @svgr/cli ./src/assets/icons -d ./src/components/icons --config-file .svgrrc.json --svgo-config .svgorc.json"
+    "svgr-icons": "npx @svgr/cli ./src/assets/icons -d ./src/components/assets/icons --config-file .svgrrc.json --svgo-config .svgorc.json",
+    "svgr-illustrations": "npx @svgr/cli ./src/assets/illustrations -d ./src/components/assets/illustrations --config-file .svgrrc.json --svgo-config .svgorc.json"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
