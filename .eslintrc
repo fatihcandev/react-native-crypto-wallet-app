@@ -5,6 +5,7 @@
   "plugins": ["@typescript-eslint"],
   "rules": {
     "prettier/prettier": "off",
-    "react-native/no-inline-styles": "off"
+    "react-native/no-inline-styles": "off",
+    "radix": "off"
   }
 }

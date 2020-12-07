@@ -11,13 +11,14 @@ const palette = {
   darkGray: '#3D4C63',
   gray: '#B5BBC9',
   lightGray: '#CFD2D8',
-  veryDarkGray: '#121212',
+  primaryBgDark: '#121212',
+  secondaryBgDark: '#2F2F2F',
 };
 
 const theme = createTheme({
   colors: {
-    bgPrimary: palette.white,
-    bgSecondary: palette.lightBlue,
+    bgPrimary: palette.lightBlue,
+    bgSecondary: palette.white,
     titleHeadline: palette.midnightBlue,
     paragraph: palette.darkGray,
     label: palette.gray,
@@ -26,6 +27,8 @@ const theme = createTheme({
     success: palette.green,
     error: palette.red,
     neutral: palette.yellow,
+    inputActive: palette.primaryBlue,
+    inputInactive: palette.lightGray,
   },
   spacing: {
     s: 8,
@@ -58,6 +61,11 @@ const theme = createTheme({
       fontSize: 15,
       color: 'paragraph',
     },
+    label: {
+      fontFamily: 'TitilliumWeb-SemiBold',
+      fontSize: 15,
+      color: 'label',
+    },
     link: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 15,
@@ -66,8 +74,11 @@ const theme = createTheme({
     fineprint: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 13,
-      color: 'titleHeadline',
     },
+  },
+  borderRadii: {
+    1: 8,
+    2: 20,
   },
   breakpoints: {
     phone: 0,
@@ -81,7 +92,8 @@ const darkTheme: Theme = {
   ...theme,
   colors: {
     ...theme.colors,
-    bgPrimary: palette.veryDarkGray,
+    bgPrimary: palette.primaryBgDark,
+    bgSecondary: palette.secondaryBgDark,
     titleHeadline: palette.gray,
     paragraph: palette.gray,
   },
