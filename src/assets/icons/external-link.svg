@@ -1,9 +1,1 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M21.4 2.1C21.6 2.2 21.8 2.4 21.9 2.6C22 2.7 22 2.9 22 3V9C22 9.6 21.6 10 21 10C20.4 10 20 9.6 20 9V5.4L10.7 14.7C10.5 14.9 10.3 15 10 15C9.7 15 9.5 14.9 9.3 14.7C8.9 14.3 8.9 13.7 9.3 13.3L18.6 4H15C14.4 4 14 3.6 14 3C14 2.4 14.4 2 15 2H21C21.1 2 21.3 2 21.4 2.1ZM19 19V13C19 12.4 18.6 12 18 12C17.4 12 17 12.4 17 13V19C17 19.6 16.6 20 16 20H5C4.4 20 4 19.6 4 19V8C4 7.4 4.4 7 5 7H11C11.6 7 12 6.6 12 6C12 5.4 11.6 5 11 5H5C3.3 5 2 6.3 2 8V19C2 20.7 3.3 22 5 22H16C17.7 22 19 20.7 19 19Z" fill="black"/>
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M21.4 2.1C21.6 2.2 21.8 2.4 21.9 2.6C22 2.7 22 2.9 22 3V9C22 9.6 21.6 10 21 10C20.4 10 20 9.6 20 9V5.4L10.7 14.7C10.5 14.9 10.3 15 10 15C9.7 15 9.5 14.9 9.3 14.7C8.9 14.3 8.9 13.7 9.3 13.3L18.6 4H15C14.4 4 14 3.6 14 3C14 2.4 14.4 2 15 2H21C21.1 2 21.3 2 21.4 2.1ZM19 19V13C19 12.4 18.6 12 18 12C17.4 12 17 12.4 17 13V19C17 19.6 16.6 20 16 20H5C4.4 20 4 19.6 4 19V8C4 7.4 4.4 7 5 7H11C11.6 7 12 6.6 12 6C12 5.4 11.6 5 11 5H5C3.3 5 2 6.3 2 8V19C2 20.7 3.3 22 5 22H16C17.7 22 19 20.7 19 19Z" fill="white"/>
-</mask>
-<g mask="url(#mask0)">
-<rect width="24" height="24" fill="#347AF0"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>

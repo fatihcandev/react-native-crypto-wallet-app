@@ -1,9 +1,0 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M19 3H17V2C17 1.4 16.6 1 16 1C15.4 1 15 1.4 15 2V3H9V2C9 1.4 8.6 1 8 1C7.4 1 7 1.4 7 2V3H5C3.3 3 2 4.3 2 6V20C2 21.7 3.3 23 5 23H19C20.7 23 22 21.7 22 20V6C22 4.3 20.7 3 19 3ZM5 5H7V6C7 6.6 7.4 7 8 7C8.6 7 9 6.6 9 6V5H15V6C15 6.6 15.4 7 16 7C16.6 7 17 6.6 17 6V5H19C19.6 5 20 5.4 20 6V9H4V6C4 5.4 4.4 5 5 5ZM5 21H19C19.6 21 20 20.6 20 20V11H4V20C4 20.6 4.4 21 5 21Z" fill="black"/>
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="1" width="20" height="22">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M19 3H17V2C17 1.4 16.6 1 16 1C15.4 1 15 1.4 15 2V3H9V2C9 1.4 8.6 1 8 1C7.4 1 7 1.4 7 2V3H5C3.3 3 2 4.3 2 6V20C2 21.7 3.3 23 5 23H19C20.7 23 22 21.7 22 20V6C22 4.3 20.7 3 19 3ZM5 5H7V6C7 6.6 7.4 7 8 7C8.6 7 9 6.6 9 6V5H15V6C15 6.6 15.4 7 16 7C16.6 7 17 6.6 17 6V5H19C19.6 5 20 5.4 20 6V9H4V6C4 5.4 4.4 5 5 5ZM5 21H19C19.6 21 20 20.6 20 20V11H4V20C4 20.6 4.4 21 5 21Z" fill="white"/>
-</mask>
-<g mask="url(#mask0)">
-<rect width="24" height="24" fill="#347AF0"/>
-</g>
-</svg>

@@ -5,11 +5,5 @@
   "svgProps": {
     "width": "24",
     "height": "24"
-  },
-  "replaceAttrValues": {
-    "#000": "currentColor",
-    "#fff": "currentColor",
-    "#347AF0": "currentColor",
-    "none": "currentColor"
   }
 }

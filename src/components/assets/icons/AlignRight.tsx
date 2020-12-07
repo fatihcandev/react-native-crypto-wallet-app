@@ -1,33 +1,22 @@
 import * as React from 'react';
-import Svg, { SvgProps, Path, Mask, G } from 'react-native-svg';
+import Svg, { SvgProps, Path } from 'react-native-svg';
 
 function SvgAlignRight(props: SvgProps) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="currentColor"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      className="align-right_svg__feather align-right_svg__feather-align-right"
       viewBox="0 0 24 24"
       width="24"
       height="24"
       {...props}
     >
-      <Path
-        fill="currentColor"
-        fillRule="evenodd"
-        d="M21 5c.6 0 1 .4 1 1s-.4 1-1 1H3c-.6 0-1-.4-1-1s.4-1 1-1h18zM7 11h14c.6 0 1-.4 1-1s-.4-1-1-1H7c-.6 0-1 .4-1 1s.4 1 1 1zm15 3c0-.6-.4-1-1-1H3c-.6 0-1 .4-1 1s.4 1 1 1h18c.6 0 1-.4 1-1zm-1 3c.6 0 1 .4 1 1s-.4 1-1 1H7c-.6 0-1-.4-1-1s.4-1 1-1h14z"
-        clipRule="evenodd"
-      />
-      <Mask id="align-right_svg__a" width={20} height={14} x={2} y={5} maskUnits="userSpaceOnUse">
-        <Path
-          fill="currentColor"
-          fillRule="evenodd"
-          d="M21 5c.6 0 1 .4 1 1s-.4 1-1 1H3c-.6 0-1-.4-1-1s.4-1 1-1h18zM7 11h14c.6 0 1-.4 1-1s-.4-1-1-1H7c-.6 0-1 .4-1 1s.4 1 1 1zm15 3c0-.6-.4-1-1-1H3c-.6 0-1 .4-1 1s.4 1 1 1h18c.6 0 1-.4 1-1zm-1 3c.6 0 1 .4 1 1s-.4 1-1 1H7c-.6 0-1-.4-1-1s.4-1 1-1h14z"
-          clipRule="evenodd"
-        />
-      </Mask>
-      <G mask="url(#align-right_svg__a)">
-        <Path fill="currentColor" d="M0 0h24v24H0z" />
-      </G>
+      <Path d="M21 10H7M21 6H3M21 14H3M21 18H7" />
     </Svg>
   );
 }

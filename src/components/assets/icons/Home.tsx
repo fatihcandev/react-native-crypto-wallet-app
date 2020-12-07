@@ -1,33 +1,23 @@
 import * as React from 'react';
-import Svg, { SvgProps, Path, Mask, G } from 'react-native-svg';
+import Svg, { SvgProps, Path } from 'react-native-svg';
 
 function SvgHome(props: SvgProps) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="currentColor"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      className="home_svg__feather home_svg__feather-home"
       viewBox="0 0 24 24"
       width="24"
       height="24"
       {...props}
     >
-      <Path
-        fill="currentColor"
-        fillRule="evenodd"
-        d="M21.6 8.217l-9-6.992c-.4-.3-.9-.3-1.2 0l-9 6.992c-.3.2-.4.5-.4.799v10.987C2 21.701 3.3 23 5 23h14c1.7 0 3-1.299 3-2.997V9.016c0-.3-.1-.6-.4-.8zM14 13.01v7.991h-4v-7.99h4zm5 7.991c.6 0 1-.4 1-.999V9.515l-8-6.193-8 6.193v10.488c0 .6.4 1 1 1h3v-8.99c0-.6.4-1 1-1h6c.6 0 1 .4 1 1v8.99h3z"
-        clipRule="evenodd"
-      />
-      <Mask id="home_svg__a" width={20} height={22} x={2} y={1} maskUnits="userSpaceOnUse">
-        <Path
-          fill="currentColor"
-          fillRule="evenodd"
-          d="M21.6 8.217l-9-6.992c-.4-.3-.9-.3-1.2 0l-9 6.992c-.3.2-.4.5-.4.799v10.987C2 21.701 3.3 23 5 23h14c1.7 0 3-1.299 3-2.997V9.016c0-.3-.1-.6-.4-.8zM14 13.01v7.991h-4v-7.99h4zm5 7.991c.6 0 1-.4 1-.999V9.515l-8-6.193-8 6.193v10.488c0 .6.4 1 1 1h3v-8.99c0-.6.4-1 1-1h6c.6 0 1 .4 1 1v8.99h3z"
-          clipRule="evenodd"
-        />
-      </Mask>
-      <G mask="url(#home_svg__a)">
-        <Path fill="currentColor" d="M0 0h24v24H0z" />
-      </G>
+      <Path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+      <Path d="M9 22V12h6v10" />
     </Svg>
   );
 }

@@ -1,9 +1,1 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M5 16C5.6 16 6 15.6 6 15C6 14.4 5.6 14 5 14H4C3.4 14 3 13.6 3 13V4C3 3.4 3.4 3 4 3H13C13.6 3 14 3.4 14 4V5C14 5.6 14.4 6 15 6C15.6 6 16 5.6 16 5V4C16 2.3 14.7 1 13 1H4C2.3 1 1 2.3 1 4V13C1 14.7 2.3 16 4 16H5ZM20 8H11C9.3 8 8 9.3 8 11V20C8 21.7 9.3 23 11 23H20C21.7 23 23 21.7 23 20V11C23 9.3 21.7 8 20 8ZM21 20C21 20.6 20.6 21 20 21H11C10.4 21 10 20.6 10 20V11C10 10.4 10.4 10 11 10H20C20.6 10 21 10.4 21 11V20Z" fill="black"/>
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="22" height="22">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M5 16C5.6 16 6 15.6 6 15C6 14.4 5.6 14 5 14H4C3.4 14 3 13.6 3 13V4C3 3.4 3.4 3 4 3H13C13.6 3 14 3.4 14 4V5C14 5.6 14.4 6 15 6C15.6 6 16 5.6 16 5V4C16 2.3 14.7 1 13 1H4C2.3 1 1 2.3 1 4V13C1 14.7 2.3 16 4 16H5ZM20 8H11C9.3 8 8 9.3 8 11V20C8 21.7 9.3 23 11 23H20C21.7 23 23 21.7 23 20V11C23 9.3 21.7 8 20 8ZM21 20C21 20.6 20.6 21 20 21H11C10.4 21 10 20.6 10 20V11C10 10.4 10.4 10 11 10H20C20.6 10 21 10.4 21 11V20Z" fill="white"/>
-</mask>
-<g mask="url(#mask0)">
-<rect width="24" height="24" fill="#347AF0"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>

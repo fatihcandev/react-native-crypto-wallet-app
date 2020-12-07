@@ -1,9 +1,1 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M21 5C21.6 5 22 5.4 22 6C22 6.6 21.6 7 21 7H3C2.4 7 2 6.6 2 6C2 5.4 2.4 5 3 5H21ZM7 11H21C21.6 11 22 10.6 22 10C22 9.4 21.6 9 21 9H7C6.4 9 6 9.4 6 10C6 10.6 6.4 11 7 11ZM22 14C22 13.4 21.6 13 21 13H3C2.4 13 2 13.4 2 14C2 14.6 2.4 15 3 15H21C21.6 15 22 14.6 22 14ZM21 17C21.6 17 22 17.4 22 18C22 18.6 21.6 19 21 19H7C6.4 19 6 18.6 6 18C6 17.4 6.4 17 7 17H21Z" fill="black"/>
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="5" width="20" height="14">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M21 5C21.6 5 22 5.4 22 6C22 6.6 21.6 7 21 7H3C2.4 7 2 6.6 2 6C2 5.4 2.4 5 3 5H21ZM7 11H21C21.6 11 22 10.6 22 10C22 9.4 21.6 9 21 9H7C6.4 9 6 9.4 6 10C6 10.6 6.4 11 7 11ZM22 14C22 13.4 21.6 13 21 13H3C2.4 13 2 13.4 2 14C2 14.6 2.4 15 3 15H21C21.6 15 22 14.6 22 14ZM21 17C21.6 17 22 17.4 22 18C22 18.6 21.6 19 21 19H7C6.4 19 6 18.6 6 18C6 17.4 6.4 17 7 17H21Z" fill="white"/>
-</mask>
-<g mask="url(#mask0)">
-<rect width="24" height="24" fill="#347AF0"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-right"><line x1="21" y1="10" x2="7" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="7" y2="18"></line></svg>
