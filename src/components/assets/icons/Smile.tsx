@@ -5,7 +5,7 @@ function SvgSmile(props: SvgProps) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
+      fill="currentColor"
       stroke="currentColor"
       className="smile_svg__w-6 smile_svg__h-6"
       viewBox="0 0 24 24"
