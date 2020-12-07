@@ -1,14 +1,19 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import { ContextProvider } from 'context';
+import { DarkThemeProvider } from 'components';
+import { Onboarding } from 'screens';
 
 const App = () => {
   return (
-    <SafeAreaProvider>
-      <View>
-        <Text>Hello, world!</Text>
-      </View>
-    </SafeAreaProvider>
+    <ContextProvider>
+      <DarkThemeProvider>
+        <SafeAreaProvider>
+          <Onboarding />
+        </SafeAreaProvider>
+      </DarkThemeProvider>
+    </ContextProvider>
   );
 };
 

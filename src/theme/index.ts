@@ -1,16 +1,31 @@
 import { createTheme } from '@shopify/restyle';
 
+const palette = {
+  white: '#FFFFFF',
+  primaryBlue: '#347AF0',
+  green: '#75BF72',
+  red: '#DF5060',
+  yellow: '#FDB32A',
+  midnightBlue: '#0D1F3C',
+  lightBlue: '#EDF1F9',
+  darkGray: '#3D4C63',
+  gray: '#B5BBC9',
+  lightGray: '#CFD2D8',
+  veryDarkGray: '#121212',
+};
+
 const theme = createTheme({
   colors: {
-    white: '#FFFFFF',
-    primaryBlue: '#347AF0',
-    green: '#75BF72',
-    red: '#DF5060',
-    yellow: '#FDB32A',
-    midnightBlue: '#0D1F3C',
-    darkGray: '#3D4C63',
-    gray: '#B5BBC9',
-    lightGray: '#CFD2D8',
+    bgPrimary: palette.white,
+    bgSecondary: palette.lightBlue,
+    titleHeadline: palette.midnightBlue,
+    paragraph: palette.darkGray,
+    label: palette.gray,
+    disabled: palette.lightGray,
+    accent: palette.primaryBlue,
+    success: palette.green,
+    error: palette.red,
+    neutral: palette.yellow,
   },
   spacing: {
     s: 8,
@@ -22,37 +37,36 @@ const theme = createTheme({
     h1: {
       fontFamily: 'TitilliumWeb-Bold',
       fontSize: 36,
-      lineHeight: 56,
+      color: 'titleHeadline',
     },
     h2: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 32,
-      lineHeight: 32,
+      color: 'titleHeadline',
     },
     h3: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 26,
-      lineHeight: 32,
+      color: 'titleHeadline',
     },
     sublime: {
       fontFamily: 'TitilliumWeb-Regular',
       fontSize: 19,
-      lineHeight: 24,
     },
     paragraph: {
       fontFamily: 'TitilliumWeb-Regular',
       fontSize: 15,
-      lineHeight: 24,
+      color: 'paragraph',
     },
     link: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 15,
-      lineHeight: 24,
+      color: 'accent',
     },
     fineprint: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 13,
-      lineHeight: 24,
+      color: 'titleHeadline',
     },
   },
   breakpoints: {
@@ -62,4 +76,15 @@ const theme = createTheme({
 });
 
 export type Theme = typeof theme;
-export default theme;
+
+const darkTheme: Theme = {
+  ...theme,
+  colors: {
+    ...theme.colors,
+    bgPrimary: palette.veryDarkGray,
+    titleHeadline: palette.gray,
+    paragraph: palette.gray,
+  },
+};
+
+export { theme, darkTheme };
