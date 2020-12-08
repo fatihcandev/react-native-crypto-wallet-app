@@ -1,9 +1,10 @@
 import React from 'react';
-import { Pressable, Switch } from 'react-native';
+import { Switch } from 'react-native';
 import { useTheme } from '@shopify/restyle';
 
 import { Theme } from 'theme';
 
+import ButtonContainer from './ButtonContainer';
 import StyledText from './StyledText';
 import Box from './Box';
 import Icon from './Icon';
@@ -36,16 +37,10 @@ const ActionButton: React.FC<IActionButtonProps> = ({
   };
 
   return (
-    <Pressable
-      android_ripple={{ radius: 300 }}
+    <ButtonContainer
       style={{
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        height: 46,
-        paddingHorizontal: theme.spacing.m,
         backgroundColor: theme.colors.actionButton,
-        borderRadius: theme.borderRadii.full,
+        justifyContent: 'space-between',
       }}
       onPress={handlePress}
     >
@@ -71,7 +66,7 @@ const ActionButton: React.FC<IActionButtonProps> = ({
           <Icon name="arrowRight" color={theme.colors.label} />
         </Box>
       )}
-    </Pressable>
+    </ButtonContainer>
   );
 };
 

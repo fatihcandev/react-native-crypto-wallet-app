@@ -1,16 +1,17 @@
 import React from 'react';
-import { ActivityIndicator, Pressable } from 'react-native';
+import { ActivityIndicator } from 'react-native';
 import { useTheme } from '@shopify/restyle';
 
 import { Theme } from 'theme';
 
+import ButtonContainer from './ButtonContainer';
 import Box from './Box';
 import Icon from './Icon';
 import StyledText from './StyledText';
 
 interface IStyledButtonProps {
   label: string;
-  variant: 'primary' | 'secondary' | 'ghost' | 'dotted' | 'positive' | 'negative';
+  variant: 'primary' | 'secondary' | 'ghost' | 'positive' | 'negative';
   icon?: string;
   loading?: boolean;
   disabled?: boolean;
@@ -55,22 +56,16 @@ const StyledButton: React.FC<IStyledButtonProps> = ({
   };
 
   return (
-    <Pressable
+    <ButtonContainer
       {...{ onPress, disabled }}
       style={{
-        flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center',
         minWidth: 177,
-        height: 46,
-        paddingHorizontal: theme.spacing.m,
         backgroundColor: theme.colors[getBgColor()],
         borderWidth: variant === 'ghost' ? 1 : 0,
         borderColor: theme.colors.buttonPrimary,
-        borderRadius: theme.borderRadii.full,
         opacity: disabled ? 0.5 : 1,
       }}
-      android_ripple={{ radius: 100 }}
     >
       {loading ? (
         <ActivityIndicator color={theme.colors[getColor()]} size="small" />
@@ -86,7 +81,7 @@ const StyledButton: React.FC<IStyledButtonProps> = ({
           </StyledText>
         </>
       )}
-    </Pressable>
+    </ButtonContainer>
   );
 };
 

@@ -12,6 +12,7 @@ export { default as StyledInput } from './StyledInput';
 export { default as SingleNumberInput } from './SingleNumberInput';
 export { default as AmountConverterInput } from './AmountConverterInput';
 
+export { default as ButtonContainer } from './ButtonContainer';
 export { default as StyledButton } from './StyledButton';
 export { default as ActionButton } from './ActionButton';
 
