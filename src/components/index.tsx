@@ -8,3 +8,4 @@ export { default as StyledButton } from './StyledButton';
 export { default as SingleNumberInput } from './SingleNumberInput';
 export { default as AmountConverterInput } from './AmountConverterInput';
 export { default as Icon } from './Icon';
+export { default as ProgressBar } from './ProgressBar';
