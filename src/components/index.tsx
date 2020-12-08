@@ -23,3 +23,5 @@ export { default as CoinSliderItem } from './CoinSliderItem';
 export { default as LabeledInfo } from './LabeledInfo';
 export { default as CoinAsset } from './CoinAsset';
 export { default as Transaction } from './Transaction';
+export { default as TransactionFilter } from './TransactionFilter';
+export { default as DialingCodeDropdown } from './DialingCodeDropdown';

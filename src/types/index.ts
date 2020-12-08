@@ -17,6 +17,11 @@ export interface INotification {
   message?: string;
 }
 
+export interface ICountry {
+  name: string;
+  dialingCode: string;
+}
+
 export enum Coin {
   bitcoin = 'bitcoin',
   litecoin = 'litecoin',
@@ -36,26 +41,30 @@ export enum TransactionStatus {
   deposited = 'deposited',
 }
 
-export enum IconName {
-  afganistan = 'afganistan',
-  afganistanSm = 'afganistanSm',
+export enum Country {
+  afghanistan = 'afghanistan',
   albania = 'albania',
-  albaniaSm = 'albaniaSm',
+  angola = 'angola',
+  argentine = 'argentine',
+  armenia = 'armenia',
+  australia = 'australia',
+  azerbaijan = 'azerbaijan',
+  unitedStates = 'unitedStates',
+}
+
+export enum IconName {
+  afghanistan = 'afghanistan',
+  albania = 'albania',
   alighRight = 'alighRight',
   angola = 'angola',
-  angolaSm = 'angolaSm',
   argentine = 'argentine',
-  argentineSm = 'argentineSm',
   armenia = 'armenia',
-  armeniaSm = 'armeniaSm',
   arrowRight = 'arrowRight',
   withdrawn = 'withdrawn',
   sent = 'sent',
   deposited = 'deposited',
   australia = 'australia',
-  australiaSm = 'australiaSm',
   azerbaijan = 'azerbaijan',
-  azerbaijanSm = 'azerbaijanSm',
   bitcoin = 'bitcoin',
   bitcoinCash = 'bitcoinCash',
   box = 'box',
@@ -94,7 +103,6 @@ export enum IconName {
   success = 'success',
   swap = 'swap',
   unitedStates = 'unitedStates',
-  unitedStatesSm = 'unitedStatesSm',
   user = 'user',
   withdrawal = 'withdrawal',
   x = 'x',
