@@ -13,6 +13,7 @@ const palette = {
   lightGray: '#CFD2D8',
   primaryBgDark: '#121212',
   secondaryBgDark: '#2F2F2F',
+  transparent: 'transparent',
 };
 
 const theme = createTheme({
@@ -29,12 +30,19 @@ const theme = createTheme({
     neutral: palette.yellow,
     inputActive: palette.primaryBlue,
     inputInactive: palette.lightGray,
+    transparent: palette.transparent,
+    buttonPrimary: palette.primaryBlue,
+    buttonPrimaryText: palette.white,
+    buttonSecondary: palette.white,
+    buttonSecondaryText: palette.primaryBlue,
   },
   spacing: {
     s: 8,
     m: 16,
     l: 24,
     xl: 40,
+    buttonVertical: 11,
+    buttonHorizontal: 13.5,
   },
   textVariants: {
     h1: {
@@ -77,8 +85,9 @@ const theme = createTheme({
     },
   },
   borderRadii: {
-    1: 8,
-    2: 20,
+    s: 8,
+    l: 20,
+    full: 99,
   },
   breakpoints: {
     phone: 0,

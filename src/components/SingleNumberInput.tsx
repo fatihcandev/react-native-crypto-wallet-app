@@ -19,7 +19,7 @@ const SingleNumberInput = forwardRef<TextInput, ISingleNumberInputProps>(
         onChangeText={text => onChangeText(text, name)}
         borderColor={isFocused ? 'inputActive' : 'inputInactive'}
         borderWidth={2}
-        borderRadius={1}
+        borderRadius="s"
         width={58}
         height={58}
         marginRight="m"

@@ -4,6 +4,7 @@ export { default as Background } from './Background';
 export { default as StyledText } from './StyledText';
 export { default as Input } from './Input';
 export { default as StyledInput } from './StyledInput';
+export { default as StyledButton } from './StyledButton';
 export { default as SingleNumberInput } from './SingleNumberInput';
 export { default as AmountConverterInput } from './AmountConverterInput';
 export { default as Icon } from './Icon';
