@@ -57,15 +57,14 @@ const StyledButton: React.FC<IStyledButtonProps> = ({
 
   return (
     <ButtonContainer
-      {...{ onPress, disabled }}
-      style={{
-        justifyContent: 'center',
-        minWidth: 177,
-        backgroundColor: theme.colors[getBgColor()],
-        borderWidth: variant === 'ghost' ? 1 : 0,
-        borderColor: theme.colors.buttonPrimary,
-        opacity: disabled ? 0.5 : 1,
-      }}
+      {...{ onPress }}
+      justifyContent="center"
+      width={177}
+      minWidth={177}
+      backgroundColor={getBgColor()}
+      borderWidth={variant === 'ghost' ? 1 : 0}
+      borderColor="buttonPrimary"
+      opacity={disabled ? 0.5 : 1}
     >
       {loading ? (
         <ActivityIndicator color={theme.colors[getColor()]} size="small" />

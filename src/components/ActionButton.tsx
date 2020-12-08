@@ -40,11 +40,9 @@ const ActionButton: React.FC<IActionButtonProps> = ({
 
   return (
     <ButtonContainer
-      style={{
-        backgroundColor: theme.colors.actionButton,
-        justifyContent: 'space-between',
-      }}
       onPress={handlePress}
+      backgroundColor="actionButton"
+      justifyContent="space-between"
     >
       <Box flexDirection="row" alignItems="center">
         {icon && <Icon name={icon} color="label" />}
