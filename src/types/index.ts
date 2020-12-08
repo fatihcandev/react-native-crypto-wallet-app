@@ -17,6 +17,25 @@ export interface INotification {
   message?: string;
 }
 
+export enum Coin {
+  bitcoin = 'bitcoin',
+  litecoin = 'litecoin',
+  ethereum = 'ethereum',
+  neo = 'neo',
+  stellar = 'stellar',
+  monero = 'monero',
+  ripple = 'ripple',
+  dash = 'dash',
+  omisego = 'omisego',
+  eos = 'eos',
+}
+
+export enum TransactionStatus {
+  withdrawn = 'withdrawn',
+  sent = 'sent',
+  deposited = 'deposited',
+}
+
 export enum IconName {
   afganistan = 'afganistan',
   afganistanSm = 'afganistanSm',
@@ -30,8 +49,9 @@ export enum IconName {
   armenia = 'armenia',
   armeniaSm = 'armeniaSm',
   arrowRight = 'arrowRight',
-  arrowUpLeftCircle = 'arrowUpLeftCircle',
-  arrowUpRightCircle = 'arrowUpRightCircle',
+  withdrawn = 'withdrawn',
+  sent = 'sent',
+  deposited = 'deposited',
   australia = 'australia',
   australiaSm = 'australiaSm',
   azerbaijan = 'azerbaijan',

@@ -18,3 +18,7 @@ export { default as ActionButton } from './ActionButton';
 
 export { default as Icon } from './Icon';
 export { default as ProgressBar } from './ProgressBar';
+export { default as CoinSliderItem } from './CoinSliderItem';
+export { default as LabeledInfo } from './LabeledInfo';
+export { default as CoinAsset } from './CoinAsset';
+export { default as Transaction } from './Transaction';
