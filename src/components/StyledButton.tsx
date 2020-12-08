@@ -63,8 +63,7 @@ const StyledButton: React.FC<IStyledButtonProps> = ({
         alignItems: 'center',
         minWidth: 177,
         height: 46,
-        paddingHorizontal: theme.spacing.buttonHorizontal,
-        paddingVertical: theme.spacing.buttonVertical,
+        paddingHorizontal: theme.spacing.m,
         backgroundColor: theme.colors[getBgColor()],
         borderWidth: variant === 'ghost' ? 1 : 0,
         borderColor: theme.colors.buttonPrimary,
@@ -82,7 +81,7 @@ const StyledButton: React.FC<IStyledButtonProps> = ({
               <Icon name={icon} color={theme.colors[getColor()]} />
             </Box>
           )}
-          <StyledText variant="sublime" color={getColor()} fontFamily="TitilliumWeb-SemiBold">
+          <StyledText variant="sublimeSemiBold" color={getColor()}>
             {label}
           </StyledText>
         </>

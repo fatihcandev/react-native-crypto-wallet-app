@@ -35,14 +35,13 @@ const theme = createTheme({
     buttonPrimaryText: palette.white,
     buttonSecondary: palette.white,
     buttonSecondaryText: palette.primaryBlue,
+    actionButton: palette.lightBlue,
   },
   spacing: {
     s: 8,
     m: 16,
     l: 24,
     xl: 40,
-    buttonVertical: 11,
-    buttonHorizontal: 13.5,
   },
   textVariants: {
     h1: {
@@ -62,6 +61,10 @@ const theme = createTheme({
     },
     sublime: {
       fontFamily: 'TitilliumWeb-Regular',
+      fontSize: 19,
+    },
+    sublimeSemiBold: {
+      fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 19,
     },
     paragraph: {
