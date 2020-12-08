@@ -6,7 +6,7 @@ import * as Icons from './assets/icons';
 
 interface IIconProps {
   name: string;
-  color: string;
+  color?: string;
   width?: string;
   height?: string;
 }
@@ -119,6 +119,8 @@ const Icon: React.FC<IIconProps> = ({ name, ...rest }) => {
       return <Icons.StatusWithdrawn {...rest} />;
     case IconName.stellar:
       return <Icons.Stellar {...rest} />;
+    case IconName.success:
+      return <Icons.Success {...rest} />;
     case IconName.swap:
       return <Icons.Swap {...rest} />;
     case IconName.unitedStates:
