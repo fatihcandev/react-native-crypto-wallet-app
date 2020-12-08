@@ -10,6 +10,7 @@ export { default as Argentine } from './Argentine';
 export { default as ArmeniaSm } from './ArmeniaSm';
 export { default as Armenia } from './Armenia';
 export { default as ArrowRight } from './ArrowRight';
+export { default as ArrowDownRightCircle } from './ArrowDownRightCircle';
 export { default as ArrowUpLeftCircle } from './ArrowUpLeftCircle';
 export { default as ArrowUpRightCircle } from './ArrowUpRightCircle';
 export { default as AustraliaSm } from './AustraliaSm';

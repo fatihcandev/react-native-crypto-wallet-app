@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Svg, { SvgProps, Circle, Path } from 'react-native-svg';
 
-function SvgArrowUpLeftCircle(props: SvgProps) {
+function SvgArrowDownRightCircle(props: SvgProps) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +13,7 @@ function SvgArrowUpLeftCircle(props: SvgProps) {
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
-      rotation={-135}
+      rotation={45}
       {...props}
     >
       <Circle cx={12} cy={12} r={10} />
@@ -22,4 +22,4 @@ function SvgArrowUpLeftCircle(props: SvgProps) {
   );
 }
 
-export default SvgArrowUpLeftCircle;
+export default SvgArrowDownRightCircle;

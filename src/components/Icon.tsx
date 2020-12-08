@@ -37,10 +37,12 @@ const Icon: React.FC<IIconProps> = ({ name, ...rest }) => {
       return <Icons.ArmeniaSm {...rest} />;
     case IconName.arrowRight:
       return <Icons.ArrowRight {...rest} />;
-    case IconName.arrowUpLeftCircle:
+    case IconName.withdrawn:
       return <Icons.ArrowUpLeftCircle {...rest} />;
-    case IconName.arrowUpRightCircle:
+    case IconName.sent:
       return <Icons.ArrowUpRightCircle {...rest} />;
+    case IconName.deposited:
+      return <Icons.ArrowDownRightCircle {...rest} />;
     case IconName.australia:
       return <Icons.Australia {...rest} />;
     case IconName.australiaSm:

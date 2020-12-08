@@ -1,40 +1,23 @@
 import * as React from 'react';
-import Svg, { SvgProps, Path, Mask, G } from 'react-native-svg';
+import Svg, { SvgProps, Circle, Path } from 'react-native-svg';
 
 function SvgArrowUpRightCircle(props: SvgProps) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
       fill="none"
-      viewBox="0 0 32 32"
-      width="24"
-      height="24"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      rotation={-45}
       {...props}
     >
-      <Path
-        fill="#000"
-        fillRule="evenodd"
-        d="M8.222 8.222a10.968 10.968 0 000 15.556 10.968 10.968 0 0015.556 0 10.968 10.968 0 000-15.556 10.968 10.968 0 00-15.556 0zm3.96 4.95c0 .565.424.99.99.99h3.252l-3.96 3.96c-.424.424-.424.99 0 1.413.425.425.99.425 1.415 0l3.96-3.96v3.253c0 .566.424.99.99.99.565 0 .99-.424.99-.99v-5.656c0-.142 0-.283-.071-.354 0-.141-.142-.283-.212-.354-.071-.07-.213-.212-.354-.212-.07-.07-.212-.07-.354-.07h-5.656a.967.967 0 00-.99.99zm10.182-3.536a8.963 8.963 0 00-12.728 0 8.963 8.963 0 000 12.728 8.963 8.963 0 0012.728 0 8.963 8.963 0 000-12.728z"
-        clipRule="evenodd"
-      />
-      <Mask
-        id="arrow-up-right-circle_svg__a"
-        width={32}
-        height={32}
-        x={0}
-        y={0}
-        maskUnits="userSpaceOnUse"
-      >
-        <Path
-          fill="#fff"
-          fillRule="evenodd"
-          d="M8.222 8.222a10.968 10.968 0 000 15.556 10.968 10.968 0 0015.556 0 10.968 10.968 0 000-15.556 10.968 10.968 0 00-15.556 0zm3.96 4.95c0 .565.424.99.99.99h3.252l-3.96 3.96c-.424.424-.424.99 0 1.413.425.425.99.425 1.415 0l3.96-3.96v3.253c0 .566.424.99.99.99.565 0 .99-.424.99-.99v-5.656c0-.142 0-.283-.071-.354 0-.141-.142-.283-.212-.354-.071-.07-.213-.212-.354-.212-.07-.07-.212-.07-.354-.07h-5.656a.967.967 0 00-.99.99zm10.182-3.536a8.963 8.963 0 00-12.728 0 8.963 8.963 0 000 12.728 8.963 8.963 0 0012.728 0 8.963 8.963 0 000-12.728z"
-          clipRule="evenodd"
-        />
-      </Mask>
-      <G mask="url(#arrow-up-right-circle_svg__a)">
-        <Path fill="#347AF0" d="M4 4h24v24H4z" />
-      </G>
+      <Circle cx={12} cy={12} r={10} />
+      <Path d="M12 16l4-4-4-4M8 12h8" />
     </Svg>
   );
 }
