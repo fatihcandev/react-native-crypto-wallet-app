@@ -1,7 +1,9 @@
 export { default as DarkThemeProvider } from './DarkThemeProvider';
 export { default as Background } from './Background';
+export { default as Notification } from './Notification';
 
 export { default as Box } from './Box';
+export { default as AnimatedBox } from './AnimatedBox';
 
 export { default as StyledText } from './StyledText';
 

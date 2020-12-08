@@ -18,7 +18,7 @@ function SvgWithdrawal(props: SvgProps) {
         clipRule="evenodd"
       />
       <Path
-        fill="#000"
+        fill="#fff"
         fillRule="evenodd"
         d="M10.276 9.333l5.529 5.529a.667.667 0 11-.943.943l-5.529-5.529v5.057a.667.667 0 11-1.333 0V8.667a.665.665 0 01.194-.47l.001-.002.002-.001A.665.665 0 018.667 8h6.666a.667.667 0 110 1.333h-5.057z"
         clipRule="evenodd"

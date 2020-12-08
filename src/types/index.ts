@@ -12,6 +12,11 @@ export interface ISingleNumberInputValue {
   [digit: string]: string;
 }
 
+export interface INotification {
+  type?: 'success' | 'reject' | 'withdrawal';
+  message?: string;
+}
+
 export enum IconName {
   afganistan = 'afganistan',
   afganistanSm = 'afganistanSm',
@@ -72,5 +77,5 @@ export enum IconName {
   unitedStatesSm = 'unitedStatesSm',
   user = 'user',
   withdrawal = 'withdrawal',
-  x = 'user',
+  x = 'x',
 }

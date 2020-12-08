@@ -36,6 +36,8 @@ const theme = createTheme({
     buttonSecondary: palette.white,
     buttonSecondaryText: palette.primaryBlue,
     actionButton: palette.lightBlue,
+    toast: palette.midnightBlue,
+    toastText: palette.white,
   },
   spacing: {
     s: 8,

@@ -1,10 +1,14 @@
 import React, { useReducer } from 'react';
+import { INotification } from 'types';
 
 export const ENABLE_DARK_MODE = 'ENABLE_DARK_MODE';
 export const DISABLE_DARK_MODE = 'DISABLE_DARK_MODE';
+export const NOTIFY = 'NOTIFY';
+export const CLEAR_NOTIFICATION = 'CLEAR_NOTIFICATION';
 
 interface IAppState {
   darkMode?: boolean;
+  notification?: INotification;
 }
 export interface IAction<T> {
   type: string;
@@ -32,6 +36,16 @@ const reducer = (state: IAppState, action: IAction<IAppState>): IAppState => {
       return {
         ...state,
         darkMode: false,
+      };
+    case NOTIFY:
+      return {
+        ...state,
+        notification: action.data?.notification,
+      };
+    case CLEAR_NOTIFICATION:
+      return {
+        ...state,
+        notification: {},
       };
     default:
       return state;
