@@ -15,28 +15,18 @@ type IIconProps = ColorProps<Theme> & {
 const Icon: React.FC<IIconProps> = ({ name, ...rest }) => {
   const props = useRestyle([color], rest);
   switch (name) {
-    case IconName.afganistan:
-      return <Icons.Afganistan {...props} />;
-    case IconName.afganistanSm:
-      return <Icons.AfganistanSm {...props} />;
+    case IconName.afghanistan:
+      return <Icons.Afghanistan {...props} />;
     case IconName.albania:
       return <Icons.Albania {...props} />;
-    case IconName.albaniaSm:
-      return <Icons.AlbaniaSm {...props} />;
     case IconName.alighRight:
       return <Icons.AlignRight {...props} />;
     case IconName.angola:
       return <Icons.Angola {...props} />;
-    case IconName.angolaSm:
-      return <Icons.AngolaSm {...props} />;
     case IconName.argentine:
       return <Icons.Argentine {...props} />;
-    case IconName.argentineSm:
-      return <Icons.ArgentineSm {...props} />;
     case IconName.armenia:
       return <Icons.Armenia {...props} />;
-    case IconName.armeniaSm:
-      return <Icons.ArmeniaSm {...props} />;
     case IconName.arrowRight:
       return <Icons.ArrowRight {...props} />;
     case IconName.withdrawn:
@@ -47,12 +37,8 @@ const Icon: React.FC<IIconProps> = ({ name, ...rest }) => {
       return <Icons.ArrowDownRightCircle {...props} />;
     case IconName.australia:
       return <Icons.Australia {...props} />;
-    case IconName.australiaSm:
-      return <Icons.AustraliaSm {...props} />;
     case IconName.azerbaijan:
       return <Icons.Azerbaijan {...props} />;
-    case IconName.azerbaijanSm:
-      return <Icons.AzerbaijanSm {...props} />;
     case IconName.bitcoin:
       return <Icons.Bitcoin {...props} />;
     case IconName.bitcoinCash:
@@ -128,7 +114,7 @@ const Icon: React.FC<IIconProps> = ({ name, ...rest }) => {
     case IconName.swap:
       return <Icons.Swap {...props} />;
     case IconName.unitedStates:
-      return <Icons.UnitedStatesSm {...props} />;
+      return <Icons.UnitedStates {...props} />;
     case IconName.user:
       return <Icons.User {...props} />;
     case IconName.withdrawal:
