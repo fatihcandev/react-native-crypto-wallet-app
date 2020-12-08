@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import { useTheme } from '@shopify/restyle';
-
-import { Theme } from 'theme';
 
 import Box from './Box';
 import Input from './Input';
@@ -19,7 +16,6 @@ const AmountConverterInput: React.FC<IAmountConverterInputProps> = ({
   currency,
   onChange,
 }) => {
-  const theme = useTheme<Theme>();
   const [swapValues, setSwapValues] = useState<boolean>(false);
 
   const calculation = value * currency;
@@ -45,11 +41,7 @@ const AmountConverterInput: React.FC<IAmountConverterInputProps> = ({
         </Box>
       </Box>
       <Box position="absolute" height="100%" right={0} justifyContent="center">
-        <IconButton
-          icon="swap"
-          color={theme.colors.accent}
-          onPress={() => setSwapValues(s => !s)}
-        />
+        <IconButton icon="swap" color="accent" onPress={() => setSwapValues(s => !s)} />
       </Box>
     </Box>
   );

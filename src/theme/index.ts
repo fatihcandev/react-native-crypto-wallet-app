@@ -18,6 +18,7 @@ const palette = {
 
 const theme = createTheme({
   colors: {
+    white: palette.white,
     bgPrimary: palette.lightBlue,
     bgSecondary: palette.white,
     titleHeadline: palette.midnightBlue,
@@ -38,6 +39,7 @@ const theme = createTheme({
     actionButton: palette.lightBlue,
     toast: palette.midnightBlue,
     toastText: palette.white,
+    transactionFilterNumber: palette.white,
   },
   spacing: {
     s: 8,

@@ -1,14 +1,15 @@
+import { ColorProps } from '@shopify/restyle';
 import React from 'react';
 import { Pressable } from 'react-native';
+import { Theme } from 'theme';
 
 import Box from './Box';
 import Icon from './Icon';
 
-interface IIconButtonProps {
+type IIconButtonProps = ColorProps<Theme> & {
   icon: string;
-  color: string;
   onPress: () => void;
-}
+};
 
 const IconButton: React.FC<IIconButtonProps> = ({ icon, color, onPress }) => {
   return (

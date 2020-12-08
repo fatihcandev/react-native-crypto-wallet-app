@@ -1,10 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import { StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useTheme } from '@shopify/restyle';
 import Animated, { Easing, useValue } from 'react-native-reanimated';
 
-import { Theme } from 'theme';
 import { AppContext, CLEAR_NOTIFICATION } from 'context';
 import { INotification } from 'types';
 
@@ -14,7 +12,6 @@ import Icon from './Icon';
 import StyledText from './StyledText';
 
 const Notification: React.FC<INotification> = ({ type, message }) => {
-  const theme = useTheme<Theme>();
   const opacity = useValue(0);
   const { dispatch } = useContext(AppContext);
   const { timing } = Animated;
@@ -70,7 +67,7 @@ const Notification: React.FC<INotification> = ({ type, message }) => {
             {message}
           </StyledText>
         </Box>
-        <Icon name="x" color={theme.colors.toastText} />
+        <Icon name="x" color="toastText" />
       </AnimatedBox>
     </SafeAreaView>
   );

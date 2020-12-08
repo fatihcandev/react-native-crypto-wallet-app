@@ -73,7 +73,7 @@ const StyledButton: React.FC<IStyledButtonProps> = ({
         <>
           {icon && (
             <Box marginRight="s">
-              <Icon name={icon} color={theme.colors[getColor()]} />
+              <Icon name={icon} color={getColor()} />
             </Box>
           )}
           <StyledText variant="sublimeSemiBold" color={getColor()}>

@@ -47,7 +47,7 @@ const ActionButton: React.FC<IActionButtonProps> = ({
       onPress={handlePress}
     >
       <Box flexDirection="row" alignItems="center">
-        {icon && <Icon name={icon} color={theme.colors.label} />}
+        {icon && <Icon name={icon} color="label" />}
         <StyledText variant="sublimeSemiBold" color="titleHeadline" marginLeft="s">
           {label}
         </StyledText>
@@ -70,7 +70,7 @@ const ActionButton: React.FC<IActionButtonProps> = ({
               {info}
             </StyledText>
           )}
-          <Icon name="arrowRight" color={theme.colors.label} />
+          <Icon name="arrowRight" color="label" />
         </Box>
       )}
     </ButtonContainer>

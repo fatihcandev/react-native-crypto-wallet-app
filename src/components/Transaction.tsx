@@ -1,7 +1,5 @@
 import React from 'react';
-import { useTheme } from '@shopify/restyle';
 
-import { Theme } from 'theme';
 import { capitalizedCase, getTransactionStatusColor } from 'utils';
 
 import Box from './Box';
@@ -16,7 +14,6 @@ interface ITransactionProps {
 }
 
 const Transaction: React.FC<ITransactionProps> = ({ status, value, amount, date }) => {
-  const theme = useTheme<Theme>();
   return (
     <Box
       flexDirection="row"
@@ -29,12 +26,7 @@ const Transaction: React.FC<ITransactionProps> = ({ status, value, amount, date 
       elevation={2}
     >
       <Box flexDirection="row" alignItems="center">
-        <Icon
-          name={status}
-          width="34"
-          height="34"
-          color={theme.colors[getTransactionStatusColor(status)]}
-        />
+        <Icon name={status} width="34" height="34" color={getTransactionStatusColor(status)} />
         <Box marginLeft="m">
           <StyledText variant="label" color="titleHeadline">{`$${value}`}</StyledText>
           <StyledText variant="paragraph">{amount}</StyledText>
