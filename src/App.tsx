@@ -3,7 +3,8 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { ContextProvider } from 'context';
 import { DarkThemeProvider } from 'components';
-import { Onboarding } from 'screens';
+import { Onboarding } from 'screens/PreAuth';
+import NotificationHandler from 'components/NotificationHandler';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <DarkThemeProvider>
         <SafeAreaProvider>
           <Onboarding />
+          <NotificationHandler />
         </SafeAreaProvider>
       </DarkThemeProvider>
     </ContextProvider>

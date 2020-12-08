@@ -11,6 +11,7 @@ import Icon from './Icon';
 
 interface IActionButtonProps {
   label: string;
+  icon?: string;
   info?: string;
   isToggle?: boolean;
   onPress?: () => void;
@@ -20,6 +21,7 @@ interface IActionButtonProps {
 
 const ActionButton: React.FC<IActionButtonProps> = ({
   label,
+  icon,
   info,
   isToggle = false,
   toggleValue,
@@ -44,9 +46,12 @@ const ActionButton: React.FC<IActionButtonProps> = ({
       }}
       onPress={handlePress}
     >
-      <StyledText variant="sublimeSemiBold" color="titleHeadline">
-        {label}
-      </StyledText>
+      <Box flexDirection="row" alignItems="center">
+        {icon && <Icon name={icon} color={theme.colors.label} />}
+        <StyledText variant="sublimeSemiBold" color="titleHeadline" marginLeft="s">
+          {label}
+        </StyledText>
+      </Box>
       {isToggle && (
         <Switch
           onValueChange={onToggle}
@@ -60,9 +65,11 @@ const ActionButton: React.FC<IActionButtonProps> = ({
       )}
       {!isToggle && (
         <Box flexDirection="row" alignItems="center">
-          <StyledText variant="paragraph" color="titleHeadline" marginRight="s">
-            {info}
-          </StyledText>
+          {info && (
+            <StyledText variant="paragraph" color="titleHeadline" marginRight="s">
+              {info}
+            </StyledText>
+          )}
           <Icon name="arrowRight" color={theme.colors.label} />
         </Box>
       )}
