@@ -80,7 +80,7 @@ const StyledInput: React.FC<IStyledInputProps> = ({
         <Box position="absolute" height="100%" right={0} bottom={0} justifyContent="center">
           <IconButton
             icon={showPassword ? 'eyeOff' : 'eye'}
-            color={focused ? 'accent' : 'label'}
+            color={focused ? 'primaryBlue' : 'label'}
             onPress={onShowPasswordPress}
           />
         </Box>

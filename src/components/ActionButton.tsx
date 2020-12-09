@@ -41,7 +41,7 @@ const ActionButton: React.FC<IActionButtonProps> = ({
   return (
     <ButtonContainer
       onPress={handlePress}
-      backgroundColor="actionButton"
+      backgroundColor="lightBlue"
       justifyContent="space-between"
     >
       <Box flexDirection="row" alignItems="center">

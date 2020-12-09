@@ -23,7 +23,7 @@ const CoinAsset: React.FC<ICoinAssetProps> = ({ coin, amount, value, profitLoss 
       justifyContent="space-between"
       height={60}
       paddingHorizontal="m"
-      backgroundColor="actionButton"
+      backgroundColor="lightBlue"
       borderRadius="full"
     >
       <Box flexDirection="row" alignItems="center">

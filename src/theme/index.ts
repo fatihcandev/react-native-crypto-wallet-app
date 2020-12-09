@@ -18,7 +18,6 @@ const palette = {
 
 const theme = createTheme({
   colors: {
-    white: palette.white,
     bgPrimary: palette.lightBlue,
     bgSecondary: palette.white,
     titleHeadline: palette.midnightBlue,
@@ -31,15 +30,17 @@ const theme = createTheme({
     neutral: palette.yellow,
     inputActive: palette.primaryBlue,
     inputInactive: palette.lightGray,
+    white: palette.white,
+    primaryBlue: palette.primaryBlue,
+    green: palette.green,
+    red: palette.red,
+    yellow: palette.yellow,
+    midnightBlue: palette.midnightBlue,
+    lightBlue: palette.lightBlue,
+    darkGray: palette.darkGray,
+    gray: palette.gray,
+    lightGray: palette.lightGray,
     transparent: palette.transparent,
-    buttonPrimary: palette.primaryBlue,
-    buttonPrimaryText: palette.white,
-    buttonSecondary: palette.white,
-    buttonSecondaryText: palette.primaryBlue,
-    actionButton: palette.lightBlue,
-    toast: palette.midnightBlue,
-    toastText: palette.white,
-    transactionFilterNumber: palette.white,
   },
   spacing: {
     s: 8,

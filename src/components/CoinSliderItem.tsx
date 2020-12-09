@@ -16,7 +16,7 @@ const CoinSliderItem: React.FC<ICoinSliderItemProps> = ({ coin }) => {
       height={46}
       flexDirection="row"
       alignItems="center"
-      backgroundColor="actionButton"
+      backgroundColor="lightBlue"
       paddingHorizontal="s"
       borderRadius="full"
     >

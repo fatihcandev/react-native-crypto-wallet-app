@@ -31,7 +31,7 @@ const TransactionFilter: React.FC<ITransactionFilterProps> = ({ type, filterAmou
     <ButtonContainer
       justifyContent="space-between"
       height={35}
-      backgroundColor={isSelected ? 'accent' : 'actionButton'}
+      backgroundColor={isSelected ? 'primaryBlue' : 'lightBlue'}
       alignSelf="flex-start"
       {...{ onPress }}
     >

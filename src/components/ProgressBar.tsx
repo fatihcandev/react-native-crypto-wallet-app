@@ -9,7 +9,7 @@ interface IProgressBarProps {
 const ProgressBar: React.FC<IProgressBarProps> = ({ value }) => {
   return (
     <Box width="100%" height={5} backgroundColor="disabled" borderRadius="full">
-      <Box backgroundColor="accent" width={`${value}%`} height={5} borderRadius="full" />
+      <Box backgroundColor="primaryBlue" width={`${value}%`} height={5} borderRadius="full" />
     </Box>
   );
 };

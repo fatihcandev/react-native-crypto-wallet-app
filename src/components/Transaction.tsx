@@ -21,7 +21,7 @@ const Transaction: React.FC<ITransactionProps> = ({ status, value, amount, date 
       justifyContent="space-between"
       height={60}
       paddingHorizontal="m"
-      backgroundColor="actionButton"
+      backgroundColor="lightBlue"
       borderRadius="full"
       elevation={2}
     >

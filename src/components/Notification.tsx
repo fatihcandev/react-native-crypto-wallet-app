@@ -63,11 +63,11 @@ const Notification: React.FC<INotification> = ({ type, message }) => {
       >
         <Box flexDirection="row" alignItems="center">
           <Icon name={type!} />
-          <StyledText variant="label" color="toastText" marginLeft="s">
+          <StyledText variant="label" color="white" marginLeft="s">
             {message}
           </StyledText>
         </Box>
-        <Icon name="x" color="toastText" />
+        <Icon name="x" color="white" />
       </AnimatedBox>
     </SafeAreaView>
   );

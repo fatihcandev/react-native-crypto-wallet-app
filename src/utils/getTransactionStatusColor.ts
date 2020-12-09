@@ -5,7 +5,7 @@ const getTransactionStatusColor = (status: string) => {
     case TransactionStatus.withdrawn:
       return 'error';
     case TransactionStatus.sent:
-      return 'accent';
+      return 'primaryBlue';
     case TransactionStatus.deposited:
       return 'success';
     default:

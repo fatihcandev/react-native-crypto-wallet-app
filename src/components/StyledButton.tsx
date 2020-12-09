@@ -30,9 +30,9 @@ const StyledButton: React.FC<IStyledButtonProps> = ({
   const getBgColor = () => {
     switch (variant) {
       case 'primary':
-        return 'buttonPrimary';
+        return 'primaryBlue';
       case 'secondary':
-        return 'buttonSecondary';
+        return 'white';
       case 'ghost':
         return 'transparent';
       case 'positive':
@@ -40,18 +40,18 @@ const StyledButton: React.FC<IStyledButtonProps> = ({
       case 'negative':
         return 'error';
       default:
-        return 'buttonPrimary';
+        return 'primaryBlue';
     }
   };
 
   const getColor = () => {
     switch (variant) {
       case 'primary' || 'positive' || 'negative':
-        return 'buttonPrimaryText';
+        return 'white';
       case 'secondary' || 'ghost':
-        return 'buttonSecondaryText';
+        return 'primaryBlue';
       default:
-        return 'buttonPrimaryText';
+        return 'white';
     }
   };
 
@@ -63,7 +63,7 @@ const StyledButton: React.FC<IStyledButtonProps> = ({
       minWidth={177}
       backgroundColor={getBgColor()}
       borderWidth={variant === 'ghost' ? 1 : 0}
-      borderColor="buttonPrimary"
+      borderColor="primaryBlue"
       opacity={disabled ? 0.5 : 1}
     >
       {loading ? (
