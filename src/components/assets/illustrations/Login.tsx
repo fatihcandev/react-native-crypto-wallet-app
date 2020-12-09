@@ -3,14 +3,7 @@ import Svg, { SvgProps, Path, Mask, G } from 'react-native-svg';
 
 function SvgLogin(props: SvgProps) {
   return (
-    <Svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 324 228"
-      width="24"
-      height="24"
-      {...props}
-    >
+    <Svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 324 228" {...props}>
       <Path
         fill="#EDF1F9"
         fillRule="evenodd"

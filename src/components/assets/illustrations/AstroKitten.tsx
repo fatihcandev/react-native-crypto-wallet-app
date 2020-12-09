@@ -3,14 +3,7 @@ import Svg, { SvgProps, Path, Mask, G } from 'react-native-svg';
 
 function SvgAstroKitten(props: SvgProps) {
   return (
-    <Svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 217 220"
-      width="24"
-      height="24"
-      {...props}
-    >
+    <Svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 217 220" {...props}>
       <Path
         fill="#C5D6F1"
         d="M29.75 85.242S32.18 6.91 75.935 21.71c43.756 14.801 51.156 52.372 82.465 23.34 31.31-29.032 74.573 28.472 29.602 72.585-44.971 44.113 51.802 71.437 3.415 92.5-48.387 21.062-77.123-57.496-111.996-21.063-34.872 36.432-74.72-16.046-60.489-47.871C33.165 109.376 29.75 85.242 29.75 85.242z"

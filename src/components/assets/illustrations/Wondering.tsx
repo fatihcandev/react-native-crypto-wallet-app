@@ -3,14 +3,7 @@ import Svg, { SvgProps, Path } from 'react-native-svg';
 
 function SvgWondering(props: SvgProps) {
   return (
-    <Svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 300 162"
-      width="24"
-      height="24"
-      {...props}
-    >
+    <Svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 300 162" {...props}>
       <Path
         fill="#E0E9F8"
         d="M31.844 149.859c0-66.338 53.778-120.116 120.116-120.116 66.339 0 120.117 53.778 120.117 120.116"

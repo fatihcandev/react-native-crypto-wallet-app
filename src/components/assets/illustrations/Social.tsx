@@ -8,8 +8,6 @@ function SvgSocial(props: SvgProps) {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       fill="none"
       viewBox="0 0 254 256"
-      width="24"
-      height="24"
       {...props}
     >
       <Path

@@ -3,14 +3,7 @@ import Svg, { SvgProps, Mask, Path, G } from 'react-native-svg';
 
 function SvgEmail(props: SvgProps) {
   return (
-    <Svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 273 220"
-      width="24"
-      height="24"
-      {...props}
-    >
+    <Svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 273 220" {...props}>
       <Mask id="email_svg__a" width={273} height={220} x={0} y={0} maskUnits="userSpaceOnUse">
         <Path
           fill="#fff"

@@ -2,7 +2,7 @@ export { default as AstroKitten } from './AstroKitten';
 export { default as Desktop } from './Desktop';
 export { default as Email } from './Email';
 export { default as Grow } from './Grow';
-export { default as İdea } from './İdea';
+export { default as Idea } from './Idea';
 export { default as Login } from './Login';
 export { default as Mobile } from './Mobile';
 export { default as Office } from './Office';

@@ -3,14 +3,7 @@ import Svg, { SvgProps, Path, Rect } from 'react-native-svg';
 
 function SvgMobile(props: SvgProps) {
   return (
-    <Svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 286 241"
-      width="24"
-      height="24"
-      {...props}
-    >
+    <Svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 286 241" {...props}>
       <Path
         fill="#E0E9F8"
         d="M143 240.4c78.977 0 143-5.149 143-11.5s-64.023-11.5-143-11.5S0 222.549 0 228.9s64.023 11.5 143 11.5z"

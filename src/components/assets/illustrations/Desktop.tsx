@@ -3,14 +3,7 @@ import Svg, { SvgProps, Path } from 'react-native-svg';
 
 function SvgDesktop(props: SvgProps) {
   return (
-    <Svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 326 240"
-      width="24"
-      height="24"
-      {...props}
-    >
+    <Svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 326 240" {...props}>
       <Path
         fill="#E0E9F8"
         fillRule="evenodd"

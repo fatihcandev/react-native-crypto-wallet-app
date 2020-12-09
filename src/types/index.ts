@@ -161,3 +161,21 @@ export enum IconName {
   withdrawalSolid = 'withdrawalSolid',
   x = 'x',
 }
+
+export enum IllustrationName {
+  astroKitten = 'astroKitten',
+  desktop = 'desktop',
+  email = 'email',
+  grow = 'grow',
+  idea = 'idea',
+  login = 'login',
+  mobile = 'mobile',
+  office = 'office',
+  privacy = 'privacy',
+  running = 'running',
+  scan = 'scan',
+  security = 'security',
+  social = 'social',
+  success = 'success',
+  wondering = 'wondering',
+}
