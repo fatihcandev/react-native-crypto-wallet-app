@@ -3,14 +3,14 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { ContextProvider } from 'context';
 import { DarkThemeProvider, NotificationHandler } from 'components';
-import { Onboarding } from 'screens/PreAuth';
+import { RootNavigator } from 'navigation';
 
 const App = () => {
   return (
     <ContextProvider>
       <DarkThemeProvider>
         <SafeAreaProvider>
-          <Onboarding />
+          <RootNavigator />
           <NotificationHandler />
         </SafeAreaProvider>
       </DarkThemeProvider>

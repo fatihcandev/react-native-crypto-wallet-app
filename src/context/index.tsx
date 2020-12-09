@@ -1,6 +1,8 @@
 import React, { useReducer } from 'react';
 import { INotification } from 'types';
 
+export const AUTH_SUCCESS = 'AUTH_SUCCESS';
+export const AUTH_FAIL = 'AUTH_FAIL';
 export const ENABLE_DARK_MODE = 'ENABLE_DARK_MODE';
 export const DISABLE_DARK_MODE = 'DISABLE_DARK_MODE';
 export const NOTIFY = 'NOTIFY';
@@ -9,6 +11,8 @@ export const CLEAR_NOTIFICATION = 'CLEAR_NOTIFICATION';
 interface IAppState {
   darkMode?: boolean;
   notification?: INotification;
+  authLoading?: boolean;
+  isLoggedIn?: boolean;
 }
 export interface IAction<T> {
   type: string;
@@ -27,6 +31,14 @@ export interface IContext<T> {
 const AppContext = React.createContext(initialState);
 const reducer = (state: IAppState, action: IAction<IAppState>): IAppState => {
   switch (action.type) {
+    case AUTH_SUCCESS:
+      return { ...state, authLoading: false, isLoggedIn: true };
+    case AUTH_FAIL:
+      return {
+        ...state,
+        authLoading: false,
+        isLoggedIn: false,
+      };
     case ENABLE_DARK_MODE:
       return {
         ...state,

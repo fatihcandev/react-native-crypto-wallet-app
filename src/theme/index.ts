@@ -14,12 +14,14 @@ const palette = {
   primaryBgDark: '#121212',
   secondaryBgDark: '#2F2F2F',
   transparent: 'transparent',
+  overlay: 'rgba(0, 0, 0, 0.5)',
 };
 
 const theme = createTheme({
   colors: {
     bgPrimary: palette.lightBlue,
     bgSecondary: palette.white,
+    bgPrimaryBlue: palette.primaryBlue,
     titleHeadline: palette.midnightBlue,
     paragraph: palette.darkGray,
     label: palette.gray,
@@ -41,6 +43,7 @@ const theme = createTheme({
     gray: palette.gray,
     lightGray: palette.lightGray,
     transparent: palette.transparent,
+    overlay: palette.overlay,
   },
   spacing: {
     s: 8,

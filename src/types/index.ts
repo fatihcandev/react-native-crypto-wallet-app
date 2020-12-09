@@ -22,6 +22,57 @@ export interface ICountry {
   dialingCode: string;
 }
 
+export type PreAuthScreens = {
+  Welcome: undefined;
+  Onboarding: undefined;
+  Login: undefined;
+  SignUp: undefined;
+};
+
+export type LoginScreens = {
+  Login: undefined;
+  Verification: undefined;
+  ForgotPassword: undefined;
+  CheckYourEmail: undefined;
+  NewPassword: undefined;
+};
+
+export type SignUpScreens = {
+  SignUp: undefined;
+  CreatePin: undefined;
+  ConfirmPin: undefined;
+};
+
+export type BottomTabScreens = {
+  Portfolio: undefined;
+  Transactions: undefined;
+  Overview: undefined;
+};
+
+export type KYCScreens = {
+  PersonalInformation: undefined;
+  DocumentVerification: undefined;
+  ScanFrontSide: undefined;
+  ScanBackSide: undefined;
+  NationalIDScan: undefined;
+  Done: undefined;
+};
+
+export type WalletScreens = {
+  Overview: undefined;
+  CoinDetails: undefined;
+  AllAssets: undefined;
+  AllTransactions: undefined;
+  TransactionDetails: undefined;
+};
+
+export type WithdrawalScreens = {
+  Amount: undefined;
+  EnterAddress: undefined;
+  ScanQRCode: undefined;
+  Confirmation: undefined;
+};
+
 export enum Coin {
   bitcoin = 'bitcoin',
   litecoin = 'litecoin',

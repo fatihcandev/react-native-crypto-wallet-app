@@ -2,12 +2,12 @@ import React from 'react';
 
 import { Background, StyledText } from 'components';
 
-const ScanFrontSide = () => {
+const Transactions = () => {
   return (
     <Background>
-      <StyledText variant="h1">ScanFrontSide</StyledText>
+      <StyledText variant="h1">Transactions</StyledText>
     </Background>
   );
 };
 
-export default ScanFrontSide;
+export default Transactions;

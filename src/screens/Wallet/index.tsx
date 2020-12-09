@@ -1,4 +1,4 @@
-export { default as Wallet } from './Wallet';
+export { default as Overview } from './Overview';
 export { default as CoinDetails } from './CoinDetails';
 export { default as AllAssets } from './AllAssets';
 export { default as AllTransactions } from './AllTransactions';
