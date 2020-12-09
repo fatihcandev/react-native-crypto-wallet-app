@@ -4,7 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import { PreAuthScreens } from 'types';
 import { Onboarding, Welcome } from 'screens/PreAuth';
-import { LoginNavigator, SignUpNavigator } from '.';
+import LoginNavigator from './LoginNavigator';
+import SignUpNavigator from './SignUpNavigator';
 
 const PreAuthStack = createStackNavigator<PreAuthScreens>();
 

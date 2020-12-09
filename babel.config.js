@@ -11,7 +11,7 @@ module.exports = {
           '@theme': 'src/theme',
           '@types': 'src/types',
           '@context': 'src/context',
-          '@constants': 'src/constants',
+          '@data': 'src/data',
           '@utils': 'src/utils',
           '@navigation': 'src/navigation',
           '@components': 'src/components',

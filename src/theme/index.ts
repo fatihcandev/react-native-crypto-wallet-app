@@ -50,49 +50,61 @@ const theme = createTheme({
     m: 16,
     l: 24,
     xl: 32,
+    '2xl': 40,
+    '3xl': 48,
+    '4xl': 56,
   },
   textVariants: {
     h1: {
       fontFamily: 'TitilliumWeb-Bold',
       fontSize: 36,
+      lineHeight: 45,
       color: 'titleHeadline',
     },
     h2: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 32,
+      lineHeight: 32,
       color: 'titleHeadline',
     },
     h3: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 26,
+      lineHeight: 32,
       color: 'titleHeadline',
     },
     sublime: {
       fontFamily: 'TitilliumWeb-Regular',
       fontSize: 19,
+      lineHeight: 24,
     },
     sublimeSemiBold: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 19,
+      lineHeight: 24,
     },
     paragraph: {
       fontFamily: 'TitilliumWeb-Regular',
       fontSize: 15,
       color: 'paragraph',
+      lineHeight: 24,
     },
     label: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 15,
       color: 'label',
+      lineHeight: 24,
     },
     link: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 15,
       color: 'accent',
+      lineHeight: 24,
     },
     fineprint: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 13,
+      lineHeight: 24,
     },
   },
   borderRadii: {

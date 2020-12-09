@@ -59,7 +59,6 @@ const StyledButton: React.FC<IStyledButtonProps> = ({
     <ButtonContainer
       {...{ onPress }}
       justifyContent="center"
-      width={177}
       minWidth={177}
       backgroundColor={getBgColor()}
       borderWidth={variant === 'ghost' ? 1 : 0}
