@@ -1,23 +1,41 @@
-import { ColorProps } from '@shopify/restyle';
 import React from 'react';
-import { Pressable } from 'react-native';
+import { BackgroundColorProps, ColorProps } from '@shopify/restyle';
+
 import { Theme } from 'theme';
 
-import Box from './Box';
 import Icon from './Icon';
+import StyledPressable from './StyledPressable';
 
-type IIconButtonProps = ColorProps<Theme> & {
-  icon: string;
-  onPress: () => void;
-};
+type IIconButtonProps = ColorProps<Theme> &
+  BackgroundColorProps<Theme> & {
+    icon: string;
+    accessibilityLabel: string;
+    onPress: () => void;
+  };
 
-const IconButton: React.FC<IIconButtonProps> = ({ icon, color, onPress }) => {
+const IconButton: React.FC<IIconButtonProps> = ({
+  icon,
+  color,
+  backgroundColor,
+  accessibilityLabel,
+  onPress,
+}) => {
   return (
-    <Pressable {...{ onPress }} android_ripple={{ radius: 30, borderless: true }}>
-      <Box padding="s">
-        <Icon name={icon} {...{ color }} />
-      </Box>
-    </Pressable>
+    <StyledPressable
+      {...{ onPress }}
+      pressableProps={{
+        android_ripple: { radius: 40, borderless: true },
+        accessibilityLabel,
+      }}
+      width={49}
+      height={49}
+      backgroundColor={backgroundColor || 'transparent'}
+      justifyContent="center"
+      alignItems="center"
+      borderRadius="m"
+    >
+      <Icon name={icon} {...{ color }} />
+    </StyledPressable>
   );
 };
 

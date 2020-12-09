@@ -105,7 +105,7 @@ export enum IconName {
   swap = 'swap',
   unitedStates = 'unitedStates',
   user = 'user',
-  withdrawal = 'withdrawal',
+  withdraw = 'withdraw',
   withdrawn = 'withdrawn',
   withdrawalSolid = 'withdrawalSolid',
   x = 'x',

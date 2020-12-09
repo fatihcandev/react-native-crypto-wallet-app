@@ -82,6 +82,7 @@ const StyledInput: React.FC<IStyledInputProps> = ({
             icon={showPassword ? 'eyeOff' : 'eye'}
             color={focused ? 'primaryBlue' : 'label'}
             onPress={onShowPasswordPress}
+            accessibilityLabel={showPassword ? 'Hide the password' : 'Show the password'}
           />
         </Box>
       )}

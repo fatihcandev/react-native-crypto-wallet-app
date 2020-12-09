@@ -41,7 +41,12 @@ const AmountConverterInput: React.FC<IAmountConverterInputProps> = ({
         </Box>
       </Box>
       <Box position="absolute" height="100%" right={0} justifyContent="center">
-        <IconButton icon="swap" color="primaryBlue" onPress={() => setSwapValues(s => !s)} />
+        <IconButton
+          icon="swap"
+          color="primaryBlue"
+          onPress={() => setSwapValues(s => !s)}
+          accessibilityLabel="Swap values"
+        />
       </Box>
     </Box>
   );

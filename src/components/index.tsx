@@ -18,10 +18,12 @@ export { default as StyledButton } from './StyledButton';
 export { default as ActionButton } from './ActionButton';
 
 export { default as Icon } from './Icon';
+export { default as IconButton } from './IconButton';
 export { default as ProgressBar } from './ProgressBar';
 export { default as CoinSliderItem } from './CoinSliderItem';
-export { default as LabeledInfo } from './LabeledInfo';
+export { default as CoinActionButton } from './CoinActionButton';
 export { default as CoinAsset } from './CoinAsset';
+export { default as LabeledInfo } from './LabeledInfo';
 export { default as Transaction } from './Transaction';
 export { default as TransactionFilter } from './TransactionFilter';
 export { default as DialingCodeDropdown } from './DialingCodeDropdown';

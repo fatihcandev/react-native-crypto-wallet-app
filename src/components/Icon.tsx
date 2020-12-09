@@ -29,7 +29,6 @@ const Icon: React.FC<IIconProps> = ({ name, ...rest }) => {
       return <Icons.Armenia {...props} />;
     case IconName.arrowRight:
       return <Icons.ArrowRight {...props} />;
-
     case IconName.australia:
       return <Icons.Australia {...props} />;
     case IconName.azerbaijan:
@@ -52,7 +51,9 @@ const Icon: React.FC<IIconProps> = ({ name, ...rest }) => {
       return <Icons.Dash {...props} />;
     case IconName.delete:
       return <Icons.Delete {...props} />;
-    case IconName.deposit || IconName.deposited:
+    case IconName.deposit:
+      return <Icons.PlusCircle {...props} />;
+    case IconName.deposited:
       return <Icons.Deposit {...props} />;
     case IconName.eos:
       return <Icons.Eos {...props} />;
@@ -92,7 +93,9 @@ const Icon: React.FC<IIconProps> = ({ name, ...rest }) => {
       return <Icons.Repeat {...props} />;
     case IconName.ripple:
       return <Icons.Ripple {...props} />;
-    case IconName.send || IconName.sent:
+    case IconName.send:
+      return <Icons.Send {...props} />;
+    case IconName.sent:
       return <Icons.Send {...props} />;
     case IconName.share:
       return <Icons.Share {...props} />;
