@@ -29,3 +29,4 @@ export { default as TransactionFilter } from './TransactionFilter';
 export { default as DialingCodeDropdown } from './DialingCodeDropdown';
 export { default as Indicator } from './Indicator';
 export { default as IndicatorDot } from './IndicatorDot';
+export { default as Loading } from './Loading';
