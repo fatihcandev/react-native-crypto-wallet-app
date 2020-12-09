@@ -29,12 +29,7 @@ const Icon: React.FC<IIconProps> = ({ name, ...rest }) => {
       return <Icons.Armenia {...props} />;
     case IconName.arrowRight:
       return <Icons.ArrowRight {...props} />;
-    case IconName.withdrawn:
-      return <Icons.ArrowUpLeftCircle {...props} />;
-    case IconName.sent:
-      return <Icons.ArrowUpRightCircle {...props} />;
-    case IconName.deposited:
-      return <Icons.ArrowDownRightCircle {...props} />;
+
     case IconName.australia:
       return <Icons.Australia {...props} />;
     case IconName.azerbaijan:
@@ -57,10 +52,14 @@ const Icon: React.FC<IIconProps> = ({ name, ...rest }) => {
       return <Icons.Dash {...props} />;
     case IconName.delete:
       return <Icons.Delete {...props} />;
+    case IconName.deposit || IconName.deposited:
+      return <Icons.Deposit {...props} />;
     case IconName.eos:
       return <Icons.Eos {...props} />;
     case IconName.ethereum:
       return <Icons.Ethereum {...props} />;
+    case IconName.exchange:
+      return <Icons.Exchange {...props} />;
     case IconName.externalLink:
       return <Icons.ExternalLink {...props} />;
     case IconName.eye:
@@ -93,10 +92,10 @@ const Icon: React.FC<IIconProps> = ({ name, ...rest }) => {
       return <Icons.Repeat {...props} />;
     case IconName.ripple:
       return <Icons.Ripple {...props} />;
+    case IconName.send || IconName.sent:
+      return <Icons.Send {...props} />;
     case IconName.share:
       return <Icons.Share {...props} />;
-    case IconName.shuffle:
-      return <Icons.Shuffle {...props} />;
     case IconName.statusDeposited:
       return <Icons.StatusDeposited {...props} />;
     case IconName.statusExchanged:
@@ -117,8 +116,10 @@ const Icon: React.FC<IIconProps> = ({ name, ...rest }) => {
       return <Icons.UnitedStates {...props} />;
     case IconName.user:
       return <Icons.User {...props} />;
-    case IconName.withdrawal:
+    case IconName.withdraw || IconName.withdrawn:
       return <Icons.Withdrawal {...props} />;
+    case IconName.withdrawalSolid:
+      return <Icons.WithdrawalSolid {...props} />;
     case IconName.x:
       return <Icons.X {...props} />;
     default:
