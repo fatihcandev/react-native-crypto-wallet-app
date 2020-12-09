@@ -8,16 +8,21 @@ import { AppContext } from 'context';
 
 import Box from './Box';
 
-const Background: React.FC = ({ children }) => {
+interface IBackgroundProps {
+  isBlue?: boolean;
+}
+
+const Background: React.FC<IBackgroundProps> = ({ isBlue, children }) => {
   const { state } = useContext(AppContext);
   const theme = useTheme<Theme>();
+  const { colors } = theme;
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar
-        backgroundColor={theme.colors.bgPrimary}
+        backgroundColor={isBlue ? colors.bgPrimaryBlue : colors.bgPrimary}
         barStyle={state.darkMode ? 'light-content' : 'dark-content'}
       />
-      <Box flex={1} backgroundColor="bgPrimary">
+      <Box flex={1} backgroundColor={isBlue ? 'bgPrimaryBlue' : 'bgPrimary'}>
         {children}
       </Box>
     </SafeAreaView>
