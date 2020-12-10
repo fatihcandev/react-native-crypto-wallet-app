@@ -60,6 +60,11 @@ const theme = createTheme({
     '9xl': 96,
   },
   textVariants: {
+    h1Light: {
+      fontFamily: 'TitilliumWeb-Light',
+      fontSize: 48,
+      lineHeight: 54,
+    },
     h1: {
       fontFamily: 'TitilliumWeb-Bold',
       fontSize: 36,
@@ -71,6 +76,11 @@ const theme = createTheme({
       fontSize: 32,
       lineHeight: 32,
       color: 'titleHeadline',
+    },
+    h3Regular: {
+      fontFamily: 'TitilliumWeb-Regular',
+      fontSize: 28,
+      lineHeight: 54,
     },
     h3: {
       fontFamily: 'TitilliumWeb-SemiBold',

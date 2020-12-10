@@ -20,7 +20,7 @@ const Background: React.FC<IBackgroundProps> = ({ isBlue, children }) => {
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar
         backgroundColor={isBlue ? colors.bgPrimaryBlue : colors.bgPrimary}
-        barStyle={state.darkMode ? 'light-content' : 'dark-content'}
+        barStyle={state.darkMode || isBlue ? 'light-content' : 'dark-content'}
       />
       <Box flex={1} backgroundColor={isBlue ? 'bgPrimaryBlue' : 'bgPrimary'}>
         {children}

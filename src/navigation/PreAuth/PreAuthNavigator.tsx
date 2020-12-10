@@ -11,13 +11,9 @@ const PreAuthStack = createStackNavigator<PreAuthScreens>();
 
 const PreAuthNavigator = () => {
   return (
-    <PreAuthStack.Navigator>
-      <PreAuthStack.Screen
-        name="Onboarding"
-        component={Onboarding}
-        options={{ headerShown: false }}
-      />
-      <PreAuthStack.Screen name="Welcome" component={Welcome} options={{ headerShown: false }} />
+    <PreAuthStack.Navigator headerMode="none">
+      <PreAuthStack.Screen name="Onboarding" component={Onboarding} />
+      <PreAuthStack.Screen name="Welcome" component={Welcome} />
       <PreAuthStack.Screen name="Login" component={LoginNavigator} />
       <PreAuthStack.Screen name="SignUp" component={SignUpNavigator} />
     </PreAuthStack.Navigator>

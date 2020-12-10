@@ -23,6 +23,8 @@ const Illustration: React.FC<IIllustrationProps> = ({ name, ...rest }) => {
       return <Illustrations.Idea {...rest} />;
     case IllustrationName.login:
       return <Illustrations.Login {...rest} />;
+    case IllustrationName.logo:
+      return <Illustrations.Logo {...rest} />;
     case IllustrationName.mobile:
       return <Illustrations.Mobile {...rest} />;
     case IllustrationName.office:
