@@ -7,6 +7,7 @@ export { default as Box } from './Box';
 export { default as AnimatedBox } from './AnimatedBox';
 
 export { default as StyledText } from './StyledText';
+export { default as PressableText } from './PressableText';
 
 export { default as Input } from './Input';
 export { default as StyledInput } from './StyledInput';

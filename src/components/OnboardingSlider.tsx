@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
-import { Dimensions, FlatList, Pressable } from 'react-native';
+import { Dimensions, FlatList } from 'react-native';
 
 import { onboardingSliderData } from 'data';
 import OnboardingSliderItem from './OnboardingSliderItem';
 import Box from './Box';
-import StyledText from './StyledText';
 import StyledButton from './StyledButton';
+import PressableText from './PressableText';
 
 interface IOnboardingSliderProps {
   onGetStartedPress: () => void;
@@ -64,14 +64,9 @@ const OnboardingSlider: React.FC<IOnboardingSliderProps> = ({ onGetStartedPress 
               </Box>
               {!isLast && (
                 <Box position="absolute" top={24} right={24}>
-                  <Pressable
-                    android_ripple={{ radius: 50, borderless: true }}
-                    onPress={handleSkipPress}
-                  >
-                    <StyledText variant="sublimeSemiBold" color="accent">
-                      Skip
-                    </StyledText>
-                  </Pressable>
+                  <PressableText variant="sublimeSemiBold" color="accent" onPress={handleSkipPress}>
+                    Skip
+                  </PressableText>
                 </Box>
               )}
             </>
