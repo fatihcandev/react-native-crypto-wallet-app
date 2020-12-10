@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Dimensions, FlatList } from 'react-native';
 
-import { onboardingSliderData } from 'data';
+import { onboardingSliderData } from '../constants';
 import OnboardingSliderItem from './OnboardingSliderItem';
 import Box from './Box';
 import StyledButton from './StyledButton';
@@ -16,7 +16,6 @@ const OnboardingSlider: React.FC<IOnboardingSliderProps> = ({ onGetStartedPress 
   const { width } = Dimensions.get('window');
 
   const handleNextPress = (index: number) => {
-    console.log(index);
     ref.current?.scrollToIndex({
       index,
       animated: true,
