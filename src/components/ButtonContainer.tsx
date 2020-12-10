@@ -14,6 +14,7 @@ import {
 import { Theme } from 'theme';
 
 import StyledPressable from './StyledPressable';
+import Box from './Box';
 
 const restyleFunctions = [layout, spacing, border, backgroundColor];
 
@@ -28,20 +29,22 @@ const ButtonContainer: React.FC<IButtonContainerProps> = ({ onPress, children, .
   const props = useRestyle(restyleFunctions, rest);
 
   return (
-    <StyledPressable
-      pressableProps={{
-        onPress,
-        android_ripple: { radius: 500 },
-      }}
-      flexDirection="row"
-      alignItems="center"
-      height={46}
-      paddingHorizontal="m"
-      borderRadius="full"
-      {...props}
-    >
-      {children}
-    </StyledPressable>
+    <Box overflow="hidden" borderRadius="full">
+      <StyledPressable
+        pressableProps={{
+          onPress,
+          android_ripple: { radius: 500 },
+        }}
+        flexDirection="row"
+        alignItems="center"
+        height={46}
+        paddingHorizontal="m"
+        borderRadius="full"
+        {...props}
+      >
+        {children}
+      </StyledPressable>
+    </Box>
   );
 };
 

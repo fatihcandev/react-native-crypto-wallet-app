@@ -23,7 +23,7 @@ const TransactionFilter: React.FC<ITransactionFilterProps> = ({ type, filterAmou
       case 'date':
         return 'Date';
       default:
-        return '';
+        return 'Transaction type';
     }
   };
 

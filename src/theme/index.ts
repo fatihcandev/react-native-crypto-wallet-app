@@ -53,6 +53,11 @@ const theme = createTheme({
     '2xl': 40,
     '3xl': 48,
     '4xl': 56,
+    '5xl': 64,
+    '6xl': 72,
+    '7xl': 80,
+    '8xl': 88,
+    '9xl': 96,
   },
   textVariants: {
     h1: {

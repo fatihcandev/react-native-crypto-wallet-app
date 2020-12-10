@@ -46,9 +46,15 @@ const StyledButton: React.FC<IStyledButtonProps> = ({
 
   const getColor = () => {
     switch (variant) {
-      case 'primary' || 'positive' || 'negative':
+      case 'primary':
         return 'white';
-      case 'secondary' || 'ghost':
+      case 'positive':
+        return 'white';
+      case 'negative':
+        return 'white';
+      case 'secondary':
+        return 'primaryBlue';
+      case 'ghost':
         return 'primaryBlue';
       default:
         return 'white';
@@ -59,7 +65,7 @@ const StyledButton: React.FC<IStyledButtonProps> = ({
     <ButtonContainer
       {...{ onPress }}
       justifyContent="center"
-      minWidth={177}
+      minWidth={200}
       backgroundColor={getBgColor()}
       borderWidth={variant === 'ghost' ? 1 : 0}
       borderColor="primaryBlue"

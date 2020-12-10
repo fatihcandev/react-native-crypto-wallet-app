@@ -23,7 +23,7 @@ const getCoinSymbol = (coin: string) => {
     case Coin.eos:
       return 'EOS';
     default:
-      return '';
+      return 'BTC';
   }
 };
 

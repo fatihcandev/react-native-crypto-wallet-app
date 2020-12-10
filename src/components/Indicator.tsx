@@ -12,7 +12,7 @@ interface IIndicatorProps {
 const Indicator: React.FC<IIndicatorProps> = ({ index, pinLength, type }) => {
   const isSlide = type === 'slide';
   return (
-    <Box flexDirection="row" alignItems="center" alignSelf="flex-start">
+    <Box flexDirection="row" alignItems="center">
       <IndicatorDot
         {...{ isSlide }}
         isActive={isSlide ? index === 1 : pinLength! > 0}
