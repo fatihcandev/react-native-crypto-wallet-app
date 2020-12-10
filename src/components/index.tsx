@@ -2,9 +2,11 @@ export { default as DarkThemeProvider } from './DarkThemeProvider';
 export { default as Background } from './Background';
 export { default as Notification } from './Notification';
 export { default as NotificationHandler } from './NotificationHandler';
+export { default as Header } from './Header';
 
 export { default as Box } from './Box';
 export { default as AnimatedBox } from './AnimatedBox';
+export { default as ContentContainer } from './ContentContainer';
 
 export { default as StyledText } from './StyledText';
 export { default as PressableText } from './PressableText';

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Dimensions, StyleSheet } from 'react-native';
+import { Dimensions } from 'react-native';
 
 import { PreAuthScreens, StackNavigationProps } from 'types';
-import { Background, Box, OnboardingSlider } from 'components';
+import { Background, ContentContainer, OnboardingSlider } from 'components';
 
 const Onboarding = ({ navigation }: StackNavigationProps<PreAuthScreens, 'Onboarding'>) => {
   const { height } = Dimensions.get('window');
@@ -11,9 +11,7 @@ const Onboarding = ({ navigation }: StackNavigationProps<PreAuthScreens, 'Onboar
 
   return (
     <Background>
-      <Box style={StyleSheet.absoluteFill} justifyContent="flex-end">
-        <Box height={height * 0.54} backgroundColor="bgSecondary" borderRadius="l" />
-      </Box>
+      <ContentContainer height={height * 0.54} />
       <OnboardingSlider onGetStartedPress={handleGetStartedPress} />
     </Background>
   );
