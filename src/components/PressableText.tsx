@@ -1,18 +1,28 @@
 import React from 'react';
 import { Pressable } from 'react-native';
-import { TextProps } from '@shopify/restyle';
+import {
+  color,
+  ColorProps,
+  typography,
+  TypographyProps,
+  useRestyle,
+  VariantProps,
+} from '@shopify/restyle';
 
 import { Theme } from 'theme';
 import StyledText from './StyledText';
 
 type IPressableTextProps = {
   onPress: () => void;
-} & TextProps<Theme>;
+} & ColorProps<Theme> &
+  TypographyProps<Theme> &
+  VariantProps<Theme, 'textVariants'>;
 
-const PressableText: React.FC<IPressableTextProps> = ({ onPress, children, ...textProps }) => {
+const PressableText: React.FC<IPressableTextProps> = ({ onPress, children, ...rest }) => {
+  const restyleProps = useRestyle([color, typography], rest);
   return (
     <Pressable android_ripple={{ radius: 500 }} {...{ onPress }}>
-      <StyledText {...textProps}>{children}</StyledText>
+      <StyledText {...restyleProps}>{children}</StyledText>
     </Pressable>
   );
 };

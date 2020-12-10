@@ -1,5 +1,11 @@
 import React from 'react';
-import { BackgroundColorProps, ColorProps } from '@shopify/restyle';
+import {
+  backgroundColor,
+  BackgroundColorProps,
+  color,
+  ColorProps,
+  useRestyle,
+} from '@shopify/restyle';
 
 import { Theme } from 'theme';
 
@@ -13,13 +19,8 @@ type IIconButtonProps = ColorProps<Theme> &
     onPress: () => void;
   };
 
-const IconButton: React.FC<IIconButtonProps> = ({
-  icon,
-  color,
-  backgroundColor,
-  accessibilityLabel,
-  onPress,
-}) => {
+const IconButton: React.FC<IIconButtonProps> = ({ icon, accessibilityLabel, onPress, ...rest }) => {
+  const restyleProps = useRestyle([color, backgroundColor], rest);
   return (
     <StyledPressable
       {...{ onPress }}
@@ -29,12 +30,12 @@ const IconButton: React.FC<IIconButtonProps> = ({
       }}
       width={49}
       height={49}
-      backgroundColor={backgroundColor || 'transparent'}
       justifyContent="center"
       alignItems="center"
       borderRadius="m"
+      {...restyleProps}
     >
-      <Icon name={icon} {...{ color }} />
+      <Icon name={icon} {...restyleProps} />
     </StyledPressable>
   );
 };
