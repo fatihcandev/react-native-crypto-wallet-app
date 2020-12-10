@@ -1,10 +1,11 @@
 import { ParamListBase, RouteProp } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 export interface StackNavigationProps<
   ParamList extends ParamListBase,
   RouteName extends keyof ParamList = string
 > {
-  navigation: StackNavigationProps<ParamList, RouteName>;
+  navigation: StackNavigationProp<ParamList, RouteName>;
   route: RouteProp<ParamList, RouteName>;
 }
 
@@ -169,6 +170,7 @@ export enum IllustrationName {
   grow = 'grow',
   idea = 'idea',
   login = 'login',
+  logo = 'logo',
   mobile = 'mobile',
   office = 'office',
   privacy = 'privacy',

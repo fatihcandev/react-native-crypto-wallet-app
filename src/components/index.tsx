@@ -18,6 +18,7 @@ export { default as StyledButton } from './StyledButton';
 export { default as ActionButton } from './ActionButton';
 
 export { default as Icon } from './Icon';
+export { default as Illustration } from './Illustration';
 export { default as IconButton } from './IconButton';
 export { default as ProgressBar } from './ProgressBar';
 export { default as CoinSliderItem } from './CoinSliderItem';
@@ -30,3 +31,5 @@ export { default as DialingCodeDropdown } from './DialingCodeDropdown';
 export { default as Indicator } from './Indicator';
 export { default as IndicatorDot } from './IndicatorDot';
 export { default as Loading } from './Loading';
+export { default as OnboardingSlider } from './OnboardingSlider';
+export { default as OnboardingSliderItem } from './OnboardingSliderItem';
