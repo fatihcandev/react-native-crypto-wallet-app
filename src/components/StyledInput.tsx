@@ -71,7 +71,7 @@ const StyledInput: React.FC<IStyledInputProps> = ({
         fontSize={19}
         fontFamily="TitilliumWeb-Regular"
         editable={!disabled}
-        secureTextEntry={!showPassword}
+        secureTextEntry={isPassword && !showPassword}
       />
       <StyledText variant="fineprint" color={errorText ? 'error' : 'label'}>
         {errorText ? errorText : infoText}
