@@ -15,7 +15,7 @@ const LoginStack = createStackNavigator<LoginScreens>();
 
 const LoginNavigator = () => {
   return (
-    <LoginStack.Navigator>
+    <LoginStack.Navigator headerMode="none">
       <LoginStack.Screen name="Login" component={Login} />
       <LoginStack.Screen name="Verification" component={Verification} />
       <LoginStack.Screen name="ForgotPassword" component={ForgotPassword} />
