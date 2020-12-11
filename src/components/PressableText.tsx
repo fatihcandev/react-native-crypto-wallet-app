@@ -14,15 +14,16 @@ import StyledText from './StyledText';
 
 type IPressableTextProps = {
   onPress: () => void;
+  label: string;
 } & ColorProps<Theme> &
   TypographyProps<Theme> &
   VariantProps<Theme, 'textVariants'>;
 
-const PressableText: React.FC<IPressableTextProps> = ({ onPress, children, ...rest }) => {
+const PressableText: React.FC<IPressableTextProps> = ({ onPress, label, ...rest }) => {
   const restyleProps = useRestyle([color, typography], rest);
   return (
-    <Pressable android_ripple={{ radius: 500 }} {...{ onPress }}>
-      <StyledText {...restyleProps}>{children}</StyledText>
+    <Pressable android_ripple={{ radius: 500 }} {...{ onPress }} style={{ padding: 5 }}>
+      <StyledText {...restyleProps}>{label}</StyledText>
     </Pressable>
   );
 };

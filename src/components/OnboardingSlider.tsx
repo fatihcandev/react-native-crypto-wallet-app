@@ -63,9 +63,12 @@ const OnboardingSlider: React.FC<IOnboardingSliderProps> = ({ onGetStartedPress 
               </Box>
               {!isLast && (
                 <Box position="absolute" top={24} right={24}>
-                  <PressableText variant="sublimeSemiBold" color="accent" onPress={handleSkipPress}>
-                    Skip
-                  </PressableText>
+                  <PressableText
+                    variant="sublimeSemiBold"
+                    color="accent"
+                    onPress={handleSkipPress}
+                    label="Skip"
+                  />
                 </Box>
               )}
             </>

@@ -49,9 +49,8 @@ const AuthBottomSection: React.FC<IAuthBottomSectionProps> = ({
           variant="label"
           color={isWelcomePage ? 'white' : 'accent'}
           onPress={onAccentTextPress}
-        >
-          {accentTextLabel}
-        </PressableText>
+          label={accentTextLabel}
+        />
       </Box>
     </Box>
   );
