@@ -63,15 +63,17 @@ const CreateVerifyPin = ({
           keyboardType="numeric"
         />
       </Box>
-      <Box marginTop="5xl" alignItems="center" marginBottom="10xl">
+      <Box marginTop="5xl" alignItems="center">
         <Indicator type="pin" pinLength={pinEntry.length} />
       </Box>
-      <NumberPad
-        onNumberPress={num => setPinEntry(p => p.concat(num))}
-        onDeletePress={() => setPinEntry(p => p.slice(1, p.length))}
-        onForgotPress={() => true}
-        {...{ isLogin }}
-      />
+      <Box flex={1} justifyContent="center">
+        <NumberPad
+          onNumberPress={num => setPinEntry(p => p.concat(num))}
+          onDeletePress={() => setPinEntry(p => p.slice(1, p.length))}
+          onForgotPress={() => true}
+          {...{ isLogin }}
+        />
+      </Box>
     </Background>
   );
 };

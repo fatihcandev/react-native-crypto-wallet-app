@@ -7,23 +7,14 @@ import auth from '@react-native-firebase/auth';
 import { SignUpScreens, StackNavigationProps } from 'types';
 import { useAlert, useKeyboardDidShow } from 'utils';
 import { validateEmailAddress, validateName, validatePassword } from 'utils/authValidation';
-import {
-  Background,
-  Box,
-  ContentContainer,
-  Header,
-  Illustration,
-  StyledInput,
-  AuthBottomSection,
-} from 'components';
+import { Background, Box, Header, Illustration, AuthForm, ContentContainer } from 'components';
 
 const SignUp = ({ navigation }: StackNavigationProps<SignUpScreens, 'SignUp'>) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [name, setName] = useState<string>('');
-  const [emailAddress, setEmailAddress] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [showPassword, setShowPassword] = useState<boolean>(false);
-
   const keyboardDidShow = useKeyboardDidShow();
   const alert = useAlert();
 
@@ -31,36 +22,6 @@ const SignUp = ({ navigation }: StackNavigationProps<SignUpScreens, 'SignUp'>) =
   const UNFOCUSED_HEIGHT = (height * 60) / 100;
   const FOCUSED_HEIGHT = (height * 87) / 100;
   const containerInitialHeight = useValue(UNFOCUSED_HEIGHT);
-
-  const isNameValid = name.length > 0 ? validateName(name) : undefined;
-  const isEmailValid = emailAddress.length > 0 ? validateEmailAddress(emailAddress) : undefined;
-  const isPasswordValid = password.length > 0 ? validatePassword(password) : undefined;
-  const isButtonDisabled = !isNameValid || !isEmailValid || !isPasswordValid || loading;
-
-  const handleNavigationToLogin = () => {
-    navigation.navigate('Login');
-  };
-
-  const handleSignUp = async () => {
-    setLoading(true);
-    try {
-      const res = await auth().createUserWithEmailAndPassword(emailAddress, password);
-      if (res) {
-        const { additionalUserInfo } = res;
-        if (additionalUserInfo) {
-          const { isNewUser } = additionalUserInfo;
-          await AsyncStorage.setItem('isNewUser', `${isNewUser}`);
-        }
-      }
-    } catch (error) {
-      if (error.code === 'auth/email-already-in-use') {
-        setLoading(false);
-        alert('Error', 'The email address is already in use by another account.', [
-          { text: 'Login instead', onPress: handleNavigationToLogin },
-        ]);
-      }
-    }
-  };
 
   const containerAnimConfig = {
     duration: 200,
@@ -81,6 +42,36 @@ const SignUp = ({ navigation }: StackNavigationProps<SignUpScreens, 'SignUp'>) =
     keyboardDidShow,
   ]);
 
+  const isNameValid = name.length > 0 ? validateName(name) : undefined;
+  const isEmailValid = email.length > 0 ? validateEmailAddress(email) : undefined;
+  const isPasswordValid = password.length > 0 ? validatePassword(password) : undefined;
+  const isButtonDisabled = [isNameValid, isEmailValid, isPasswordValid].some(c => !c) || loading;
+
+  const handleNavigationToLogin = () => {
+    navigation.navigate('Login');
+  };
+
+  const handleSignUp = async () => {
+    setLoading(true);
+    try {
+      const res = await auth().createUserWithEmailAndPassword(email, password);
+      if (res) {
+        const { additionalUserInfo } = res;
+        if (additionalUserInfo) {
+          const { isNewUser } = additionalUserInfo;
+          await AsyncStorage.setItem('isNewUser', `${isNewUser}`);
+        }
+      }
+    } catch (error) {
+      if (error.code === 'auth/email-already-in-use') {
+        setLoading(false);
+        alert('Error', 'The email address is already in use by another account.', [
+          { text: 'Login instead', onPress: handleNavigationToLogin },
+        ]);
+      }
+    }
+  };
+
   return (
     <Background>
       <Header {...{ navigation }} title="Create account" colorMode="dark" />
@@ -88,45 +79,29 @@ const SignUp = ({ navigation }: StackNavigationProps<SignUpScreens, 'SignUp'>) =
         <Illustration name="office" width="308" height={`${(height * 21.05) / 100}`} />
       </Box>
       <ContentContainer height={containerInitialHeight}>
-        <StyledInput
-          label="Full Name"
-          value={name}
-          onChangeText={v => setName(v)}
-          disabled={loading}
-          errorText={isNameValid === undefined || isNameValid ? '' : 'Name is not valid'}
-        />
-        <StyledInput
-          label="Email Address"
-          value={emailAddress}
-          onChangeText={v => setEmailAddress(v)}
-          keyboardType="email-address"
-          disabled={loading}
-          errorText={isEmailValid === undefined || isEmailValid ? '' : 'Email address is not valid'}
-        />
-        <StyledInput
-          {...{ showPassword }}
-          label="Password"
-          value={password}
-          onChangeText={v => setPassword(v)}
-          isPassword
+        <AuthForm
+          {...{
+            name,
+            email,
+            password,
+            isNameValid,
+            isEmailValid,
+            isPasswordValid,
+            loading,
+            isButtonDisabled,
+            showPassword,
+          }}
+          isSignUp
+          onNameChange={v => setName(v)}
+          onEmailChange={v => setEmail(v)}
+          onPasswordChange={v => setPassword(v)}
           onShowPasswordPress={() => setShowPassword(s => !s)}
-          disabled={loading}
-          errorText={
-            isPasswordValid === undefined || isPasswordValid ? '' : 'Password is not valid'
-          }
+          onNavigationToLoginOrSignUp={handleNavigationToLogin}
+          onSignUpPress={handleSignUp}
+          submitButtonLabel="Let's get started"
+          bottomSectionLightTextLabel="Already have an account?"
+          bottomSectionAccentTextLabel="Login"
         />
-        <Box marginTop="m">
-          <AuthBottomSection
-            mainButtonVariant="primary"
-            mainButtonLabel="Let's Get Started"
-            mainButtonLoading={loading}
-            mainButtonDisabled={isButtonDisabled}
-            lightTextLabel="Already have an account?"
-            accentTextLabel="Login"
-            onMainButtonPress={handleSignUp}
-            onAccentTextPress={handleNavigationToLogin}
-          />
-        </Box>
       </ContentContainer>
     </Background>
   );

@@ -25,14 +25,15 @@ const NumberPad: React.FC<INumberPadProps> = ({
       const isMiddleV = num === '2' || num === '5' || num === '8';
       const isMiddleH = num === '4' || num === '5' || num === '6';
       return (
-        <Box
-          key={index}
-          marginHorizontal={isMiddleV ? '7xl' : undefined}
-          marginVertical={isMiddleH ? '2xl' : undefined}
-        >
+        <Box key={index}>
           <Pressable
             android_ripple={{ radius: 40, borderless: true }}
             onPress={() => onNumberPress(num)}
+            style={{
+              padding: 20,
+              marginHorizontal: isMiddleV ? 20 : 0,
+              marginVertical: isMiddleH ? 10 : 0,
+            }}
           >
             <StyledText variant="h1">{num}</StyledText>
           </Pressable>
@@ -60,13 +61,17 @@ const NumberPad: React.FC<INumberPadProps> = ({
         marginTop="2xl"
       >
         {isLogin && onForgotPress && (
-          <PressableText variant="sublime" color="midnightBlue" onPress={onForgotPress}>
-            Forgot?
-          </PressableText>
+          <PressableText
+            label="Forgot?"
+            variant="sublime"
+            color="midnightBlue"
+            onPress={onForgotPress}
+          />
         )}
         <Box position="absolute" left={0} right={0} alignItems="center">
           <Pressable
             android_ripple={{ radius: 40, borderless: true }}
+            style={{ padding: 20 }}
             onPress={() => onNumberPress('0')}
           >
             <StyledText variant="h1">0</StyledText>
