@@ -83,6 +83,41 @@ export type WithdrawalScreens = {
   Confirmation: undefined;
 };
 
+export type SMTYFScreens = {
+  Amount: undefined;
+  ChooseRecipient: undefined;
+  AddMessage: undefined;
+  Confirmation: undefined;
+};
+
+export type ProfileScreens = {
+  Overview: undefined;
+  PersonalInformation: undefined;
+  ChooseCurrency: undefined;
+  Security: undefined;
+  PhoneNumberVerification: undefined;
+};
+
+export type SecurityScreens = {
+  Security: undefined;
+  ChangePassword: undefined;
+  ChangePin: undefined;
+  NewPin: undefined;
+  TFA: undefined;
+};
+
+export type PNVScreens = {
+  EnterPhoneNumber: undefined;
+  ChooseDialingCode: undefined;
+  VerifyCode: undefined;
+  Done: undefined;
+};
+
+export type TFAScreens = {
+  TFA: undefined;
+  Confirmation: undefined;
+};
+
 export enum Coin {
   bitcoin = 'bitcoin',
   litecoin = 'litecoin',
