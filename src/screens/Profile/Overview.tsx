@@ -2,12 +2,12 @@ import React from 'react';
 
 import { Background, StyledText } from 'components';
 
-const AddMessage = () => {
+const Overview = () => {
   return (
     <Background>
-      <StyledText variant="h1">AddMessage</StyledText>
+      <StyledText variant="h1">Overview</StyledText>
     </Background>
   );
 };
 
-export default AddMessage;
+export default Overview;

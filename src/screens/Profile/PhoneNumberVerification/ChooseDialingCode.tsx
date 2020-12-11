@@ -1,4 +1,9 @@
-/*
+import React from 'react';
+
+import { Background, StyledText } from 'components';
+
+const ChooseDialingCode = () => {
+  /*
 
 const [selectedCountry, setSelectedCountry] = useState<ICountry>({
     name: 'unitedStates',
@@ -17,3 +22,11 @@ const [selectedCountry, setSelectedCountry] = useState<ICountry>({
 
 
  */
+  return (
+    <Background>
+      <StyledText variant="h1">ChooseDialingCode</StyledText>
+    </Background>
+  );
+};
+
+export default ChooseDialingCode;
