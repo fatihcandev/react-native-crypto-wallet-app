@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { PreAuthScreens, StackNavigationProps } from 'types';
-import { Background, Box, Illustration, StyledButton, StyledText, PressableText } from 'components';
+import { Background, Box, Illustration, StyledText, AuthBottomSection } from 'components';
 
 const Welcome = ({ navigation }: StackNavigationProps<PreAuthScreens, 'Welcome'>) => {
   const handleNavigation = (route: 'Login' | 'SignUp') => {
@@ -22,22 +22,16 @@ const Welcome = ({ navigation }: StackNavigationProps<PreAuthScreens, 'Welcome'>
             WHOLLET
           </StyledText>
         </Box>
-        <Box flex={1} justifyContent="flex-end" alignItems="center" paddingBottom="xl">
-          <Box marginBottom="m">
-            <StyledButton
-              variant="secondary"
-              label="Create account"
-              onPress={() => handleNavigation('SignUp')}
-            />
-          </Box>
-          <Box flexDirection="row" alignItems="center">
-            <StyledText variant="paragraph" color="white" marginRight="s">
-              Have an account?
-            </StyledText>
-            <PressableText variant="label" color="white" onPress={() => handleNavigation('Login')}>
-              Login
-            </PressableText>
-          </Box>
+        <Box flex={1} justifyContent="flex-end">
+          <AuthBottomSection
+            mainButtonVariant="secondary"
+            mainButtonLabel="Create account"
+            lightTextLabel="Already have an account?"
+            accentTextLabel="Login"
+            onMainButtonPress={() => handleNavigation('SignUp')}
+            onAccentTextPress={() => handleNavigation('Login')}
+            isWelcomePage
+          />
         </Box>
       </Box>
     </Background>

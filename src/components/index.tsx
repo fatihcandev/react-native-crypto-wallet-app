@@ -36,3 +36,5 @@ export { default as IndicatorDot } from './IndicatorDot';
 export { default as Loading } from './Loading';
 export { default as OnboardingSlider } from './OnboardingSlider';
 export { default as OnboardingSliderItem } from './OnboardingSliderItem';
+export { default as AuthBottomSection } from './AuthBottomSection';
+export { default as NumberPad } from './NumberPad';

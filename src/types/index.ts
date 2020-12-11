@@ -33,7 +33,7 @@ export type PreAuthScreens = {
 export type LoginScreens = {
   Login: undefined;
   SignUp: undefined;
-  Verification: undefined;
+  CreateVerifyPin: undefined;
   ForgotPassword: undefined;
   CheckYourEmail: undefined;
   NewPassword: undefined;
@@ -42,8 +42,15 @@ export type LoginScreens = {
 export type SignUpScreens = {
   SignUp: undefined;
   Login: undefined;
-  CreatePin: undefined;
-  ConfirmPin: undefined;
+  CreateVerifyPin: undefined;
+};
+
+export type CreateVerifyPinScreens = {
+  CreateVerifyPin: undefined;
+  ConfirmPin: {
+    createdPin: string;
+  };
+  Home: undefined;
 };
 
 export type BottomTabScreens = {

@@ -16,7 +16,9 @@ const IndicatorDot: React.FC<IIndicatorDotProps> = ({ isActive, isSlide, ...rest
     <Box
       width={isSlide ? 10 : 22}
       height={isSlide ? 10 : 22}
-      backgroundColor={isActive ? (isSlide ? 'primaryBlue' : 'green') : 'lightBlue'}
+      backgroundColor={
+        isActive ? (isSlide ? 'primaryBlue' : 'green') : isSlide ? 'lightBlue' : 'gray'
+      }
       borderRadius="full"
       {...props}
     />
