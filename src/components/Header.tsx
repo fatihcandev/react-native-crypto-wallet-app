@@ -6,24 +6,24 @@ import StyledText from './StyledText';
 
 type IHeaderProps = {
   title: string;
+  subtitle?: string;
   colorMode: 'light' | 'dark';
   rightSideIcon?: string;
   onRightSideIconPress?: () => void;
-  info?: string;
   navigation: any;
 };
 
 const Header: React.FC<IHeaderProps> = ({
   title,
+  subtitle,
   colorMode,
   rightSideIcon,
   onRightSideIconPress,
-  info,
   navigation,
 }) => {
   const color = colorMode === 'light' ? 'white' : 'midnightBlue';
   return (
-    <Box marginTop="xl">
+    <Box paddingTop="s" paddingHorizontal="m">
       <Box flexDirection="row" alignItems="center" justifyContent="center" position="relative">
         {navigation.canGoBack() && (
           <Box position="absolute" left={0}>
@@ -49,9 +49,9 @@ const Header: React.FC<IHeaderProps> = ({
           </Box>
         )}
       </Box>
-      {info && (
+      {subtitle && (
         <StyledText variant="paragraph" textAlign="center">
-          {info}
+          {subtitle}
         </StyledText>
       )}
     </Box>
