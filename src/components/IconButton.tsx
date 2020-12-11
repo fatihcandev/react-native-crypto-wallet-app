@@ -16,10 +16,19 @@ type IIconButtonProps = ColorProps<Theme> &
   BackgroundColorProps<Theme> & {
     icon: string;
     accessibilityLabel: string;
+    iconWidth?: string;
+    iconHeight?: string;
     onPress: () => void;
   };
 
-const IconButton: React.FC<IIconButtonProps> = ({ icon, accessibilityLabel, onPress, ...rest }) => {
+const IconButton: React.FC<IIconButtonProps> = ({
+  icon,
+  accessibilityLabel,
+  iconWidth = '24',
+  iconHeight = '24',
+  onPress,
+  ...rest
+}) => {
   const restyleProps = useRestyle([color, backgroundColor], rest);
   return (
     <StyledPressable
@@ -35,7 +44,7 @@ const IconButton: React.FC<IIconButtonProps> = ({ icon, accessibilityLabel, onPr
       borderRadius="m"
       {...restyleProps}
     >
-      <Icon name={icon} {...restyleProps} />
+      <Icon name={icon} {...restyleProps} width={iconWidth} height={iconHeight} />
     </StyledPressable>
   );
 };

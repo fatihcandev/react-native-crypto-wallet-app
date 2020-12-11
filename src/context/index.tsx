@@ -8,9 +8,9 @@ export const NOTIFY = 'NOTIFY';
 export const CLEAR_NOTIFICATION = 'CLEAR_NOTIFICATION';
 
 interface IAppState {
+  authLoading?: boolean;
   darkMode?: boolean;
   notification?: INotification;
-  authLoading?: boolean;
 }
 export interface IAction<T> {
   type: string;
@@ -18,9 +18,9 @@ export interface IAction<T> {
 }
 const initialState: IContext<IAppState> = {
   state: {
+    authLoading: true,
     darkMode: false,
     notification: {},
-    authLoading: true,
   },
   dispatch: (_value: IAction<IAppState>) => null,
 };

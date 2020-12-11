@@ -19,16 +19,16 @@ const OnboardingSliderItem: React.FC<IOnboardingSliderItemProps> = ({
   illustration,
   index,
 }) => {
-  const { width } = Dimensions.get('window');
+  const { width, height } = Dimensions.get('window');
   return (
-    <Box flex={1} paddingTop="7xl" alignItems="center">
-      <Box marginBottom="9xl">
-        <Illustration name={illustration} width={`${width}`} height="240" />
+    <Box flex={1} paddingTop="6xl" alignItems="center">
+      <Box marginBottom="7xl">
+        <Illustration name={illustration} width={`${width}`} height={`${(height * 29.55) / 100}`} />
       </Box>
       <Box marginBottom="xl">
         <Indicator type="slide" {...{ index }} />
       </Box>
-      <Box maxWidth={327}>
+      <Box maxWidth={width - 96}>
         <StyledText variant="h1" textAlign="center">
           {header}
         </StyledText>
