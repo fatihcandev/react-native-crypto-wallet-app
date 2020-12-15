@@ -1,2 +1,2 @@
 export { default as PreAuthNavigator } from './PreAuthNavigator';
-export { default as CreateVerifyPinNavigator } from './CreateVerifyPinNavigator';
+export { default as CCVPNavigator } from './CCVPNavigator';

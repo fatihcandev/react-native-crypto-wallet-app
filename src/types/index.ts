@@ -37,19 +37,17 @@ export type LoginScreens = {
   ForgotPassword: undefined;
   CheckYourEmail: undefined;
   NewPassword: undefined;
+  CreateConfirmVerifyPin: undefined;
 };
 
 export type SignUpScreens = {
   SignUp: undefined;
   Login: undefined;
-  CreateVerifyPin: undefined;
+  CreateConfirmVerifyPin: undefined;
 };
 
-export type CreateVerifyPinScreens = {
-  CreateVerifyPin: undefined;
-  ConfirmPin: {
-    createdPin: string;
-  };
+export type CCVPScreens = {
+  CreateConfirmVerifyPin: undefined;
   Home: undefined;
 };
 

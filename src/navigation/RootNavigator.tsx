@@ -4,7 +4,7 @@ import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
 
 import { AppContext, AUTH_CHECKED } from 'context';
 import { Loading } from 'components';
-import { CreateVerifyPinNavigator, PreAuthNavigator } from './PreAuth';
+import { CCVPNavigator, PreAuthNavigator } from './PreAuth';
 
 const RootNavigator = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -32,7 +32,7 @@ const RootNavigator = () => {
     <Loading />
   ) : (
     <NavigationContainer>
-      {user !== null ? <CreateVerifyPinNavigator /> : <PreAuthNavigator />}
+      {user !== null ? <CCVPNavigator /> : <PreAuthNavigator />}
     </NavigationContainer>
   );
 };
