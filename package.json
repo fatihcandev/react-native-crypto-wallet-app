@@ -7,10 +7,10 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint:eslint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:eslint": "eslint src/**/*.{ts,tsx}",
     "lint:ts": "tsc && yarn lint:eslint",
     "lint": "yarn lint:ts",
-    "format": "prettier --write 'src/**/*.{ts,tsx}' && yarn lint:eslint --fix",
+    "format": "prettier --write src/**/*.{ts,tsx} && yarn lint:eslint --fix",
     "svgr-icons": "svgr ./src/assets/icons -d ./src/components/assets/icons --config-file .svgrrc.json --svgo-config .svgorc.json",
     "svgr-illustrations": "svgr ./src/assets/illustrations -d ./src/components/assets/illustrations --config-file .svgrrc.json --svgo-config .svgorc.json"
   },
