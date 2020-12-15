@@ -58,6 +58,9 @@ const theme = createTheme({
     '7xl': 80,
     '8xl': 88,
     '9xl': 96,
+    '10xl': 104,
+    '11xl': 112,
+    '12xl': 120,
   },
   textVariants: {
     h1Light: {
@@ -101,20 +104,20 @@ const theme = createTheme({
     paragraph: {
       fontFamily: 'TitilliumWeb-Regular',
       fontSize: 15,
-      color: 'paragraph',
       lineHeight: 24,
+      color: 'paragraph',
     },
     label: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 15,
-      color: 'label',
       lineHeight: 24,
+      color: 'label',
     },
     link: {
       fontFamily: 'TitilliumWeb-SemiBold',
       fontSize: 15,
-      color: 'accent',
       lineHeight: 24,
+      color: 'accent',
     },
     fineprint: {
       fontFamily: 'TitilliumWeb-SemiBold',
