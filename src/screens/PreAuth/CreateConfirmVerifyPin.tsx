@@ -16,11 +16,7 @@ const CreateConfirmVerifyPin = ({
 
   const alert = useAlert();
   const isLogin = pin !== null;
-  const isConfirm = createdPin.length > 0;
-  console.log('is login:', isLogin);
-  console.log('is confirm:', isConfirm);
-  console.log('created pin:', createdPin);
-  console.log('saved pin:', pin);
+  const isConfirm = createdPin.length === 4;
 
   const checkIfPinExists = useCallback(async () => {
     const savedPin = await AsyncStorage.getItem('pin');
@@ -44,6 +40,14 @@ const CreateConfirmVerifyPin = ({
     alert('Invalid PIN', 'Please try again.');
   }, [alert]);
 
+  const handlePinEntry = (v: string) => {
+    if (!isLogin && !isConfirm) {
+      setCreatedPin(p => p.concat(v));
+    } else {
+      setPinEntry(p => p.concat(v));
+    }
+  };
+
   const handlePinEntryFinish = useCallback(() => {
     if (pinEntry.length === 4) {
       setLoading(true);
@@ -61,7 +65,6 @@ const CreateConfirmVerifyPin = ({
         }
       } else {
         setLoading(false);
-        setCreatedPin(pinEntry);
       }
     }
   }, [
@@ -78,7 +81,7 @@ const CreateConfirmVerifyPin = ({
   return (
     <PinLayout
       {...{ pinEntry, loading, isLogin }}
-      onPinChange={v => setPinEntry(p => p.concat(v))}
+      onPinChange={handlePinEntry}
       onCheckIfPinExists={checkIfPinExists}
       onPinEntryFinished={handlePinEntryFinish}
       onPinDelete={() => setPinEntry(p => p.slice(1, p.length))}
