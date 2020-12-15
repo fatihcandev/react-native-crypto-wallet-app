@@ -1,7 +1,7 @@
 import { AppContext } from 'context';
 import React, { useContext } from 'react';
 
-import Notification from './Notification';
+import { Notification } from './Notification';
 
 const NotificationHandler: React.FC = () => {
   const { state } = useContext(AppContext);

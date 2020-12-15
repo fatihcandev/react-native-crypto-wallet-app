@@ -4,7 +4,7 @@ import { useTheme } from '@shopify/restyle';
 
 import { Theme } from 'theme';
 
-import ButtonContainer from './ButtonContainer';
+import { ButtonContainer } from './ButtonContainer';
 import Box from './Box';
 import Icon from './Icon';
 import StyledText from './StyledText';

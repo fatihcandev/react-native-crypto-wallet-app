@@ -5,13 +5,15 @@ import auth from '@react-native-firebase/auth';
 
 import { SignUpScreens, StackNavigationProps } from 'types';
 import { useAlert } from 'utils';
-import { validateEmailAddress, validatePassword } from 'utils/authValidation';
+import { validateEmailAddress, validateName, validatePassword } from 'utils/authValidation';
+
 import { Background, Box, Illustration } from 'components';
 import { Header } from 'components/Header';
 import { AuthForm } from 'components/AuthForm';
 
 const SignUp = ({ navigation }: StackNavigationProps<SignUpScreens, 'SignUp'>) => {
   const [loading, setLoading] = useState<boolean>(false);
+  const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -19,14 +21,19 @@ const SignUp = ({ navigation }: StackNavigationProps<SignUpScreens, 'SignUp'>) =
 
   const { height } = Dimensions.get('window');
 
+  const isNameValid = name.length > 0 ? validateName(name) : undefined;
   const isEmailValid = email.length > 0 ? validateEmailAddress(email) : undefined;
   const isPasswordValid = password.length > 0 ? validatePassword(password) : undefined;
-  const isButtonDisabled = [isEmailValid, isPasswordValid].some(c => !c) || loading;
+  const isButtonDisabled = [isNameValid, isEmailValid, isPasswordValid].some(c => !c) || loading;
 
-  const handleLogin = async () => {
+  const handleNavigationToLogin = () => {
+    navigation.navigate('Login');
+  };
+
+  const handleSignUp = async () => {
     setLoading(true);
     try {
-      const res = await auth().signInWithEmailAndPassword(email, password);
+      const res = await auth().createUserWithEmailAndPassword(email, password);
       if (res) {
         const { additionalUserInfo } = res;
         if (additionalUserInfo) {
@@ -35,41 +42,43 @@ const SignUp = ({ navigation }: StackNavigationProps<SignUpScreens, 'SignUp'>) =
         }
       }
     } catch (error) {
-      if (error.code === 'auth/user-not-found') {
+      if (error.code === 'auth/email-already-in-use') {
         setLoading(false);
-        alert(
-          'Error',
-          'The email and password you entered did not match our records. Please double check and try again.',
-        );
+        alert('Error', 'The email address is already in use by another account.', [
+          { text: 'Login instead', onPress: handleNavigationToLogin },
+        ]);
       }
     }
   };
 
   return (
     <Background>
-      <Header {...{ navigation }} title="Welcome Back!" colorMode="dark" />
-      <Box alignItems="center" justifyContent="flex-end" height={height * 0.38}>
-        <Illustration name="login" width="308" height={`${(height * 28) / 100}`} />
+      <Header {...{ navigation }} title="Create account" colorMode="dark" />
+      <Box alignItems="center" justifyContent="flex-end" height={height * 0.35}>
+        <Illustration name="office" width="308" height={`${(height * 21.05) / 100}`} />
       </Box>
       <AuthForm
         {...{
+          name,
           email,
           password,
+          isNameValid,
           isEmailValid,
           isPasswordValid,
           loading,
           isButtonDisabled,
           showPassword,
         }}
+        isSignUp
+        onNameChange={v => setName(v)}
         onEmailChange={v => setEmail(v)}
         onPasswordChange={v => setPassword(v)}
         onShowPasswordPress={() => setShowPassword(s => !s)}
-        onNavigationToLoginOrSignUp={() => navigation.navigate('SignUp')}
-        onSignUpPress={handleLogin}
-        onForgotPasswordPress={() => true}
-        submitButtonLabel="Login"
-        bottomSectionLightTextLabel="Don't have an account?"
-        bottomSectionAccentTextLabel="Sign Up"
+        onNavigationToLoginOrSignUp={handleNavigationToLogin}
+        onSignUpPress={handleSignUp}
+        submitButtonLabel="Let's get started"
+        bottomSectionLightTextLabel="Already have an account?"
+        bottomSectionAccentTextLabel="Login"
       />
     </Background>
   );

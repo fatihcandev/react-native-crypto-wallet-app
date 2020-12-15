@@ -2,10 +2,11 @@ import React, { useRef } from 'react';
 import { Dimensions, FlatList } from 'react-native';
 
 import { onboardingSliderData } from '../constants';
-import OnboardingSliderItem from './OnboardingSliderItem';
+
 import Box from './Box';
 import StyledButton from './StyledButton';
 import PressableText from './PressableText';
+import { OnboardingSliderItem } from './OnboardingSliderItem';
 
 interface IOnboardingSliderProps {
   onGetStartedPress: () => void;
