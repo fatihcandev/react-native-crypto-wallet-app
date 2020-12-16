@@ -19,7 +19,7 @@ const Icon: React.FC<IIconProps> = ({ name, ...rest }) => {
       return <Icons.Afghanistan {...props} />;
     case IconName.albania:
       return <Icons.Albania {...props} />;
-    case IconName.alighRight:
+    case IconName.alignRight:
       return <Icons.AlignRight {...props} />;
     case IconName.angola:
       return <Icons.Angola {...props} />;
