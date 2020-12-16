@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActivityIndicator } from 'react-native';
+import { ActivityIndicator, View } from 'react-native';
 import { useTheme } from '@shopify/restyle';
 
 import { Theme } from 'theme';
@@ -8,6 +8,8 @@ import { ButtonContainer } from './ButtonContainer';
 import Box from './Box';
 import Icon from './Icon';
 import StyledText from './StyledText';
+
+import ButtonContainerStyle from './ButtonContainer/ButtonContainer.style';
 
 interface IStyledButtonProps {
   label: string;
@@ -71,20 +73,22 @@ const StyledButton: React.FC<IStyledButtonProps> = ({
       borderColor="primaryBlue"
       opacity={disabled ? 0.5 : 1}
     >
-      {loading ? (
-        <ActivityIndicator color={theme.colors[getColor()]} size="small" />
-      ) : (
-        <>
-          {icon && (
-            <Box marginRight="s">
-              <Icon name={icon} color={getColor()} />
-            </Box>
-          )}
-          <StyledText variant="sublimeSemiBold" color={getColor()}>
-            {label}
-          </StyledText>
-        </>
-      )}
+      <View style={ButtonContainerStyle.container}>
+        {loading ? (
+          <ActivityIndicator color={theme.colors[getColor()]} size="small" />
+        ) : (
+          <>
+            {icon && (
+              <Box marginRight="s">
+                <Icon name={icon} color={getColor()} />
+              </Box>
+            )}
+            <StyledText variant="sublimeSemiBold" color={getColor()}>
+              {label}
+            </StyledText>
+          </>
+        )}
+      </View>
     </ButtonContainer>
   );
 };

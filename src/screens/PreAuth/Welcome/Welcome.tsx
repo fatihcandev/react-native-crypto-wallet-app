@@ -2,7 +2,7 @@ import React from 'react';
 
 import { PreAuthScreens, StackNavigationProps } from 'types';
 import { Background, Box, Illustration, StyledText } from 'components';
-import { AuthBottomSection } from 'components/AuthBottomSection';
+import { BottomSection } from 'components/BottomSection';
 
 import WelcomeStyle from './Welcome.style';
 
@@ -13,7 +13,7 @@ const Welcome = ({ navigation }: StackNavigationProps<PreAuthScreens, 'Welcome'>
 
   return (
     <Background isBlue>
-      <Box flex={1} alignItems="center" style={WelcomeStyle.container}>
+      <Box flex={1} alignItems="center">
         <Box style={WelcomeStyle.logo}>
           <Illustration name="logo" />
         </Box>
@@ -26,7 +26,7 @@ const Welcome = ({ navigation }: StackNavigationProps<PreAuthScreens, 'Welcome'>
           </StyledText>
         </Box>
         <Box flex={1} justifyContent="flex-end">
-          <AuthBottomSection
+          <BottomSection
             mainButtonVariant="secondary"
             mainButtonLabel="Create account"
             lightTextLabel="Already have an account?"

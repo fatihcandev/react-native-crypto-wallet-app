@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native';
+import { spacing } from 'styles';
 
 export default StyleSheet.create({
   bottomSection: {
-    flex: 1,
-    justifyContent: 'flex-end',
+    marginTop: spacing.xlV,
   },
 });

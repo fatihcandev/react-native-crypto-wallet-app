@@ -1,5 +1,4 @@
 import React from 'react';
-import { View } from 'react-native';
 import {
   layout,
   spacing,
@@ -17,8 +16,6 @@ import { Theme } from 'theme';
 import StyledPressable from '../StyledPressable';
 import Box from '../Box';
 
-import ButtonContainerStyle from './ButtonContainer.style';
-
 const restyleFunctions = [layout, spacing, border, backgroundColor];
 
 type IButtonContainerProps = LayoutProps<Theme> &
@@ -33,21 +30,19 @@ const ButtonContainer: React.FC<IButtonContainerProps> = ({ onPress, children, .
 
   return (
     <Box overflow="hidden" borderRadius="full">
-      <View style={ButtonContainerStyle.container}>
-        <StyledPressable
-          pressableProps={{
-            onPress,
-            android_ripple: { radius: 500 },
-          }}
-          flexDirection="row"
-          alignItems="center"
-          height={46}
-          borderRadius="full"
-          {...props}
-        >
-          {children}
-        </StyledPressable>
-      </View>
+      <StyledPressable
+        pressableProps={{
+          onPress,
+          android_ripple: { radius: 500 },
+        }}
+        flexDirection="row"
+        alignItems="center"
+        height={46}
+        borderRadius="full"
+        {...props}
+      >
+        {children}
+      </StyledPressable>
     </Box>
   );
 };

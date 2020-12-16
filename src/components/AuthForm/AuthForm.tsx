@@ -5,7 +5,7 @@ import { Easing, timing, useValue } from 'react-native-reanimated';
 import { useKeyboardDidShow } from 'utils';
 
 import { ContentContainer } from '../ContentContainer';
-import { AuthBottomSection } from '../AuthBottomSection';
+import { BottomSection } from '../BottomSection';
 import Box from '../Box';
 import PressableText from '../PressableText';
 import StyledInput from '../StyledInput';
@@ -14,8 +14,6 @@ import AuthFormStyle from './AuthForm.style';
 
 interface IAuthFormProps {
   isSignUp?: boolean;
-  name?: string;
-  isNameValid?: boolean;
   email: string;
   isEmailValid?: boolean;
   password: string;
@@ -26,7 +24,6 @@ interface IAuthFormProps {
   submitButtonLabel: string;
   bottomSectionLightTextLabel: string;
   bottomSectionAccentTextLabel: string;
-  onNameChange?: (name: string) => void;
   onEmailChange: (email: string) => void;
   onPasswordChange: (password: string) => void;
   onShowPasswordPress: () => void;
@@ -37,8 +34,6 @@ interface IAuthFormProps {
 
 const AuthForm: React.FC<IAuthFormProps> = ({
   isSignUp,
-  name,
-  isNameValid,
   email,
   isEmailValid,
   password,
@@ -49,7 +44,6 @@ const AuthForm: React.FC<IAuthFormProps> = ({
   submitButtonLabel,
   bottomSectionLightTextLabel,
   bottomSectionAccentTextLabel,
-  onNameChange,
   onEmailChange,
   onPasswordChange,
   onShowPasswordPress,
@@ -59,7 +53,7 @@ const AuthForm: React.FC<IAuthFormProps> = ({
 }) => {
   const keyboardDidShow = useKeyboardDidShow();
   const { height } = Dimensions.get('window');
-  const UNFOCUSED_HEIGHT = (height * (isSignUp ? 60 : 57)) / 100;
+  const UNFOCUSED_HEIGHT = (height * 57) / 100;
   const FOCUSED_HEIGHT = (height * 87) / 100;
   const containerInitialHeight = useValue(UNFOCUSED_HEIGHT);
 
@@ -84,15 +78,6 @@ const AuthForm: React.FC<IAuthFormProps> = ({
 
   return (
     <ContentContainer height={containerInitialHeight}>
-      {isSignUp && (
-        <StyledInput
-          label="Full Name"
-          value={name!}
-          onChangeText={onNameChange!}
-          disabled={loading}
-          errorText={isNameValid === undefined || isNameValid ? '' : 'Name is not valid'}
-        />
-      )}
       <StyledInput
         label="Email Address"
         value={email}
@@ -100,6 +85,7 @@ const AuthForm: React.FC<IAuthFormProps> = ({
         keyboardType="email-address"
         disabled={loading}
         errorText={isEmailValid === undefined || isEmailValid ? '' : 'Email address is not valid'}
+        ariaLabel="email"
       />
       <StyledInput
         {...{ showPassword }}
@@ -110,6 +96,7 @@ const AuthForm: React.FC<IAuthFormProps> = ({
         disabled={loading}
         errorText={isPasswordValid === undefined || isPasswordValid ? '' : 'Password is not valid'}
         isPassword
+        ariaLabel="password"
       />
       {!isSignUp && (
         <Box alignSelf="flex-end">
@@ -121,7 +108,7 @@ const AuthForm: React.FC<IAuthFormProps> = ({
         </Box>
       )}
       <View style={AuthFormStyle.bottomSection}>
-        <AuthBottomSection
+        <BottomSection
           mainButtonVariant="primary"
           mainButtonLabel={submitButtonLabel}
           mainButtonLoading={loading}

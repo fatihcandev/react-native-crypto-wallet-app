@@ -12,6 +12,7 @@ type IPinLayout = {
   pinEntry: string;
   loading: boolean;
   isLogin: boolean;
+  isConfirm: boolean;
   onCheckIfPinExists: () => void;
   onPinEntryFinished: () => void;
   onPinChange: (v: string) => void;
@@ -20,6 +21,7 @@ type IPinLayout = {
 
 const PinLayout: React.FC<IPinLayout> = ({
   isLogin,
+  isConfirm,
   pinEntry,
   loading,
   onCheckIfPinExists,
@@ -35,15 +37,16 @@ const PinLayout: React.FC<IPinLayout> = ({
     onPinEntryFinished();
   }, [onPinEntryFinished]);
 
-  const title = isLogin ? 'Verification required' : 'Create a PIN';
-  const subtitle = isLogin
-    ? 'Please enter your PIN to proceed'
-    : 'Enhance the security of your account by creating a PIN code';
+  const title = isLogin || isConfirm ? 'Verification required' : 'Create a PIN';
+  const subtitle =
+    isLogin || isConfirm
+      ? 'Please enter your PIN to proceed'
+      : 'Enhance the security of your account by creating a PIN code';
 
   return (
     <Background>
       {loading && <Loading isFullScreen />}
-      <Header {...{ title, subtitle }} colorMode="dark" />
+      <Header {...{ title, subtitle }} />
       <Box position="absolute">
         <TextInput
           value={pinEntry}

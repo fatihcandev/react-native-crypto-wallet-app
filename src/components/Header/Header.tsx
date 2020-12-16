@@ -11,7 +11,7 @@ import HeaderStyle from './Header.style';
 type IHeaderProps = {
   title: string;
   subtitle?: string;
-  colorMode: 'light' | 'dark';
+  colorMode?: 'light' | 'dark';
   rightSideIcon?: string;
   onRightSideIconPress?: () => void;
 };
@@ -19,7 +19,7 @@ type IHeaderProps = {
 const Header: React.FC<IHeaderProps> = ({
   title,
   subtitle,
-  colorMode,
+  colorMode = 'dark',
   rightSideIcon,
   onRightSideIconPress,
 }) => {
