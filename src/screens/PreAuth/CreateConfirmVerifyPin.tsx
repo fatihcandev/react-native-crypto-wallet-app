@@ -19,12 +19,19 @@ const CreateConfirmVerifyPin = ({
   const isConfirm = createdPin.length === 4;
 
   const checkIfPinExists = useCallback(async () => {
-    const savedPin = await AsyncStorage.getItem('pin');
-    setPin(savedPin);
-  }, []);
+    setLoading(true);
+    try {
+      const savedPin = await AsyncStorage.getItem('pin');
+      setPin(savedPin);
+    } catch (error) {
+      alert('Error', error);
+    } finally {
+      setLoading(false);
+    }
+  }, [alert]);
 
   const handleNavigateHome = useCallback(() => {
-    navigation.navigate('Home');
+    navigation.replace('Home');
   }, [navigation]);
 
   const savePin = useCallback(async () => {
@@ -80,7 +87,7 @@ const CreateConfirmVerifyPin = ({
 
   return (
     <PinLayout
-      {...{ pinEntry, loading, isLogin }}
+      {...{ pinEntry, loading, isLogin, isConfirm }}
       onPinChange={handlePinEntry}
       onCheckIfPinExists={checkIfPinExists}
       onPinEntryFinished={handlePinEntryFinish}
