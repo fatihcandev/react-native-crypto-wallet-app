@@ -5,7 +5,7 @@ import auth from '@react-native-firebase/auth';
 
 import { SignUpScreens, StackNavigationProps } from 'types';
 import { useAlert } from 'utils';
-import { validateEmailAddress, validateName, validatePassword } from 'utils/authValidation';
+import { validateEmailAddress, validatePassword } from 'utils/authValidation';
 
 import { Background, Box, Illustration } from 'components';
 import { Header } from 'components/Header';
@@ -13,7 +13,6 @@ import { AuthForm } from 'components/AuthForm';
 
 const SignUp = ({ navigation }: StackNavigationProps<SignUpScreens, 'SignUp'>) => {
   const [loading, setLoading] = useState<boolean>(false);
-  const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -21,10 +20,9 @@ const SignUp = ({ navigation }: StackNavigationProps<SignUpScreens, 'SignUp'>) =
 
   const { height } = Dimensions.get('window');
 
-  const isNameValid = name.length > 0 ? validateName(name) : undefined;
   const isEmailValid = email.length > 0 ? validateEmailAddress(email) : undefined;
   const isPasswordValid = password.length > 0 ? validatePassword(password) : undefined;
-  const isButtonDisabled = [isNameValid, isEmailValid, isPasswordValid].some(c => !c) || loading;
+  const isButtonDisabled = [isEmailValid, isPasswordValid].some(c => !c) || loading;
 
   const handleNavigationToLogin = () => {
     navigation.navigate('Login');
@@ -53,16 +51,14 @@ const SignUp = ({ navigation }: StackNavigationProps<SignUpScreens, 'SignUp'>) =
 
   return (
     <Background>
-      <Header {...{ navigation }} title="Create account" colorMode="dark" />
-      <Box alignItems="center" justifyContent="flex-end" height={height * 0.35}>
-        <Illustration name="office" width="308" height={`${(height * 21.05) / 100}`} />
+      <Header {...{ navigation }} title="Create account" />
+      <Box alignItems="center" justifyContent="flex-end" height={height * 0.37}>
+        <Illustration name="office" width="308" height="171" />
       </Box>
       <AuthForm
         {...{
-          name,
           email,
           password,
-          isNameValid,
           isEmailValid,
           isPasswordValid,
           loading,
@@ -70,7 +66,6 @@ const SignUp = ({ navigation }: StackNavigationProps<SignUpScreens, 'SignUp'>) =
           showPassword,
         }}
         isSignUp
-        onNameChange={v => setName(v)}
         onEmailChange={v => setEmail(v)}
         onPasswordChange={v => setPassword(v)}
         onShowPasswordPress={() => setShowPassword(s => !s)}
